@@ -116,7 +116,7 @@ const FeatureItem = ({
 
 const Index = () => {
   const { t } = useTranslation(["landing_page"]);
-  const { t: infoT } = useTranslation('info');
+  const { t: infoT } = useTranslation("info");
   const [d, setD] = React.useState("");
   const [eventIsLaunch, setLiquidityIsOn] = React.useState(true); // set true means disable counting down
   const [currServerDateString, setCurrServerDateString] = React.useState("");
@@ -149,23 +149,23 @@ const Index = () => {
     if (!indicatorRef.current) return;
     const el = indicatorRef.current;
     const cb: IntersectionObserverCallback = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.intersectionRatio < 1) {
-          document.body.classList.add('show-blur');
+          document.body.classList.add("show-blur");
         } else {
-          document.body.classList.remove('show-blur');
+          document.body.classList.remove("show-blur");
         }
-      })
+      });
     };
     const observer = new IntersectionObserver(cb, {
       rootMargin: "-76px 0px 0px 0px",
-      threshold: [0, 0.1,0.2,0.3,0.4,0.5,.6,.7,.8,.9,1]
-    })
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+    });
     observer.observe(el);
     return () => {
       observer.unobserve(el);
-    }
-  }, [indicatorRef.current])
+    };
+  }, [indicatorRef.current]);
 
   React.useEffect(() => {
     getCurrDate();
@@ -227,36 +227,6 @@ const Index = () => {
         </h1>
         <h2>{t("a_suite_of_defi_products")}</h2>
         <div className="actions flex">
-          <button className="deposit" style={{ display: "none" }}>
-            {eventIsLaunch ? (
-              <a
-                href="https://liquidity.bella.fi/"
-                target="_blank"
-                style={{ color: "#FFFFFF", margin: "auto" }}
-                rel="noopener noreferrer"
-              >
-                {t("deposit_button")}
-              </a>
-            ) : (
-              <>
-                {currServerDateString !== "" && currDatetime !== 0 && (
-                  <span>
-                    <i className="timer icon"></i>
-                    {d}
-                  </span>
-                )}
-                <span>
-                  <i className="timer icon"></i>
-                  {t("comming_soon")}
-                </span>
-              </>
-            )}
-            {/**
-             * <span>{t('deposit_button')}</span>
-             *
-             */}
-          </button>
-
           <button className="loan">
             <a
               href="https://fs.bella.fi/#/flex-savings"
@@ -264,8 +234,31 @@ const Index = () => {
               rel="noopener noreferrer"
               style={{ color: "#00b2f9", margin: "auto" }}
             >
-              {t("fs_right_btn")}
+              {t("info:flex_savings")}
             </a>
+          </button>
+          <button className="deposit" style={{ position: "relative" }}>
+            <a
+              href="https://liquidity.bella.fi/"
+              target="_blank"
+              style={{ color: "#FFFFFF", margin: "auto" }}
+              rel="noopener noreferrer"
+            >
+              {t("info:lp_farm")}
+            </a>
+            <div
+              className="new"
+              style={{
+                position: "absolute",
+                right: -23,
+                top: -11,
+                color: "#00b2f9",
+                fontWeight: "bold",
+                fontSize: 16,
+              }}
+            >
+              New!
+            </div>
           </button>
         </div>
         <div className="intro flex h-center v-center">
@@ -327,7 +320,7 @@ const Index = () => {
                 {[
                   [t("bella_1_click"), t("smart_protal_for_pupular_defi")],
                   [t("bella_flex_savings"), t("smart_robo_advisor_to_pick")],
-                  [infoT('tuner'), t('tuner_detail')]
+                  [infoT("tuner"), t("tuner_detail")],
                 ].map((v, i) => (
                   <div key={i}>
                     <PSuiteItem v={v} />
@@ -347,7 +340,7 @@ const Index = () => {
           .indicator {
             position: absolute;
             top: 0;
-            height:1px;
+            height: 1px;
             background: transparent;
             pointer-events: none;
             width: 1px;
@@ -475,6 +468,14 @@ const Index = () => {
             border-radius: 2.29rem;
             width: 20rem;
             height: 4.57rem;
+          }
+
+          .actions button a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .actions button + button {
