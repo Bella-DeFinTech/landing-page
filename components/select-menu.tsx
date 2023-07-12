@@ -1,17 +1,17 @@
 import { useTranslation } from "../i18n";
-import {launchApp, useData} from './menus';
+import { launchApp, useData } from "./menus";
 
 export default () => {
   const { t, i18n } = useTranslation(["routes"]);
-  const {menus} = useData();
+  const { menus } = useData();
   return (
     <div className="root">
       <ul className="menu">
-        {menus.map((v) =>
+        {menus.map((v) => (
           <li>
             <div>{v[0]}</div>
             <ul>
-              {v[1].map(item => (
+              {v[1].map((item) => (
                 <li>
                   <a href={item.href} key={item.name} target="__blank">
                     {item.name}
@@ -20,7 +20,7 @@ export default () => {
               ))}
             </ul>
           </li>
-        )}
+        ))}
       </ul>
       <i
         className="icon"
@@ -41,18 +41,14 @@ export default () => {
           : "TR"}
       </i>
 
-      <a
-        href={launchApp.href}
-        target="__blank"
-        rel="noopener noreferrer"
-      >
+      <a href={launchApp.href} target="__blank" rel="noopener noreferrer">
         <div className="app flex v-center h-center">{launchApp.name}</div>
       </a>
 
       <style jsx>
         {`
           .root {
-            height: 100vh;
+            // height: 100vh;
             // padding-top: 03px;
             width: 100vw;
             display: flex;
@@ -100,7 +96,8 @@ export default () => {
             text-transform: uppercase;
           }
 
-          .menu, .menu > li {
+          .menu,
+          .menu > li {
             width: 100%;
           }
 

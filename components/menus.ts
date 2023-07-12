@@ -2,7 +2,7 @@ import { useTranslation, i18n } from "../i18n";
 
 export const launchApp = {
   name: "Launch App",
-  href: "https://fs.bella.fi/#/flex-savings",
+  href: "http://lpfarm.bella.fi/",
 };
 
 export const medias = [
@@ -26,6 +26,11 @@ export const useData = () => {
             href: "https://bellafi.gitbook.io/bella-protocol/",
           },
           {
+            name: t("info:lp_farm"),
+            href:
+              "https://bellafi.gitbook.io/bella-protocol/lp-farm/about-bella-lp-farm",
+          },
+          {
             name: t("info:tuner"),
             href: "https://docs.bella.fi/getting-started/readme",
           },
@@ -35,6 +40,23 @@ export const useData = () => {
         t("info:developers"),
         [
           { name: "Github Repo", href: "https://github.com/Bella-DeFinTech" },
+          {
+            name: t("info:tuner"),
+            href: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
+          },
+        ],
+      ],
+      [
+        t("info:products"),
+        [
+          {
+            name: t("info:flex_savings"),
+            href: "https://github.com/Bella-DeFinTech",
+          },
+          {
+            name: t("info:lp_farm"),
+            href: "http://lpfarm.bella.fi/",
+          },
           {
             name: t("info:tuner"),
             href: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
