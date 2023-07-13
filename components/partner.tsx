@@ -34,11 +34,13 @@ export default () => {
             logo: "izumi.svg",
             link: "https://izumi.finance/",
             size: "10rem auto",
+            hasBorder: true,
           },
           {
             logo: "Tidal_Finance.jpg",
             link: "https://tidal.finance/",
             size: "12rem auto",
+            hasBorder: true,
           },
           {
             logo: "binance_new.webp",

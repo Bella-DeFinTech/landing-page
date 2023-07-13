@@ -74,11 +74,6 @@ export default () => {
                 backgroundImage: `url(/images/investor/${v.icon})`,
                 backgroundSize: v.size ?? "148px auto",
                 backgroundRepeat: "no-repeat",
-                ...(v.hasBorder
-                  ? {
-                      border: "2px solid #eee",
-                    }
-                  : {}),
               }}
             />
           </a>
