@@ -9,22 +9,22 @@ export default () => {
       <h1>{t("investors")}</h1>
       <div className="list">
         {[
+          { link: "https://www.binance.com/en", icon: "binance_new.webp" },
           {
             link: "https://arringtonxrpcapital.com/",
             icon: "arrington-capital.svg",
           },
-          { link: "https://www.binance.com/en", icon: "biance.svg" },
           { link: "https://alphabit.fund/", icon: "alphabit.png" },
-          {
-            link: "https://www.alphacoinfund.com/",
-            icon: "alpha_coin.jpeg",
-            hasBorder: true,
-          },
-          {
-            link: "https://koiinvestments.ai/",
-            icon: "koi.png",
-            hasBorder: true,
-          },
+          // {
+          //   link: "https://www.alphacoinfund.com/",
+          //   icon: "alpha_coin.jpeg",
+          //   hasBorder: true,
+          // },
+          // {
+          //   link: "https://koiinvestments.ai/",
+          //   icon: "koi.png",
+          //   hasBorder: true,
+          // },
           {
             link: "https://www.rockx.com/",
             icon: "rockx.png",
@@ -35,23 +35,23 @@ export default () => {
             icon: "ledger_capital.png",
             size: "100% auto",
           },
-          {
-            link: "https://tensor.ventures/#home",
-            icon: "tensor_ventures.png",
-            hasBorder: true,
-          },
-          { link: "", icon: "n7.png", size: "100% auto" },
-          {
-            link: "https://www.questcapital.group/",
-            icon: "quest_capital.png",
-            hasBorder: true,
-          },
-          {
-            link: "https://www.theforceprotocol.com/",
-            icon: "force_partners.png",
-            size: "100% auto",
-          },
-          { link: "", icon: "hbtc.png", size: "100% auto" },
+          // {
+          //   link: "https://tensor.ventures/#home",
+          //   icon: "tensor_ventures.png",
+          //   hasBorder: true,
+          // },
+          // { link: "", icon: "n7.png", size: "100% auto" },
+          // {
+          //   link: "https://www.questcapital.group/",
+          //   icon: "quest_capital.png",
+          //   hasBorder: true,
+          // },
+          // {
+          //   link: "https://www.theforceprotocol.com/",
+          //   icon: "force_partners.png",
+          //   size: "100% auto",
+          // },
+          // { link: "", icon: "hbtc.png", size: "100% auto" },
         ].map((v, i) => (
           <a
             href={v.link}

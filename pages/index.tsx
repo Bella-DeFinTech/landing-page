@@ -18,7 +18,7 @@ const PSuiteItem = ({ v }: { v: string[] }) => (
         }
 
         .cc {
-          font-size: 1.43rem;
+          font-size: 1.1rem;
           font-family: DINNextLTPro-Light, DINNextLTPro;
           font-weight: 300;
           color: rgba(108, 111, 134, 1);
@@ -79,7 +79,7 @@ const FeatureItem = ({
         }
 
         .descr {
-          font-size: 1.43rem;
+          font-size: 1.1rem;
           font-family: DINNextLTPro-Light, DINNextLTPro;
           font-weight: 300;
           color: rgba(108, 111, 134, 1);
@@ -320,7 +320,7 @@ const Index = () => {
                 {[
                   [t("bella_1_click"), t("smart_protal_for_pupular_defi")],
                   [t("bella_flex_savings"), t("smart_robo_advisor_to_pick")],
-                  [infoT("tuner"), t("tuner_detail")],
+                  ["Bella " + infoT("tuner"), t("tuner_detail")],
                 ].map((v, i) => (
                   <div key={i}>
                     <PSuiteItem v={v} />
@@ -588,7 +588,7 @@ const Index = () => {
             font-family: DINNextLTPro-Light, DINNextLTPro;
             font-weight: 300;
             color: rgba(108, 111, 134, 1);
-            font-size: 1.43rem;
+            font-size: 1.1rem;
           }
 
           .what p.small::after {
