@@ -239,7 +239,7 @@ const Index = () => {
           </button>
           <button className="deposit" style={{ position: "relative" }}>
             <a
-              href="https://liquidity.bella.fi/"
+              href="http://lpfarm.bella.fi/"
               target="_blank"
               style={{ color: "#FFFFFF", margin: "auto" }}
               rel="noopener noreferrer"
