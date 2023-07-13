@@ -75,6 +75,16 @@ export const useData = () => {
             href: "https://bellafi.gitbook.io/bella-protocol/",
           },
           {
+            name:
+              i18n.language === "zh_cn"
+                ? "LP Farm文档"
+                : i18n.language === "en"
+                ? "LP Farm Docs"
+                : "LP Farm dokümanlar",
+            href:
+              "https://bellafi.gitbook.io/bella-protocol/lp-farm/about-bella-lp-farm",
+          },
+          {
             name: t("info:tuner_started"),
             href: "https://docs.bella.fi/getting-started/readme",
           },

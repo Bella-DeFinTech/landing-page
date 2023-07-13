@@ -7,13 +7,33 @@ export default () => {
   return (
     <div className="root">
       <div id="partners" style={{ position: "absolute", top: -36 }}></div>
-      <h1>{t("partners")}</h1>
+      <h1>{t("ecosystem")}</h1>
       <div className="list">
         {[
+          // Uniswap
           {
-            logo: "Travala.svg",
-            link: "https://www.travala.com/",
-            size: "12rem auto",
+            logo: "uniswap.png",
+            link: "https://uniswap.org/",
+            size: "10rem auto",
+          },
+          // Curve
+          {
+            logo: "curve.svg",
+            link: "https://curve.fi/",
+            size: "10rem auto",
+          },
+          // zkSync
+          {
+            logo: "zksync.png",
+            link: "https://zksync.io/",
+            size: "10rem auto",
+          },
+
+          // iZumi
+          {
+            logo: "izumi.svg",
+            link: "https://izumi.finance/",
+            size: "10rem auto",
           },
           {
             logo: "Tidal_Finance.jpg",
@@ -21,37 +41,8 @@ export default () => {
             size: "12rem auto",
           },
           {
-            logo: "Alchemy_Pay.png",
-            link: "https://www.alchemytech.io/",
-            size: "12rem auto",
-          },
-          {
-            logo: "4everland.svg",
-            link: "https://www.4everland.org/",
-            size: "13rem auto",
-            hasBorder: true,
-          },
-          {
-            logo: "Solv_Protocol-black.png",
-            link: "https://solv.finance/",
-            size: "12rem auto",
-            hasBorder: true,
-          },
-          {
-            logo: "fortube.png",
-            link: "https://for.tube/",
-            size: "12rem auto",
-            hasBorder: true,
-          },
-          {
-            logo: "InsurAce.png",
-            link: "https://www.insurace.io/",
-            size: "7rem auto",
-            hasBorder: true,
-          },
-          {
-            logo: "chromia-logo_rgb.svg",
-            link: "https://chromia.com/",
+            logo: "binance_new.webp",
+            link: "https://www.binance.com/en",
             size: "10rem auto",
             hasBorder: true,
           },
