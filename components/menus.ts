@@ -51,7 +51,7 @@ export const useData = () => {
         [
           {
             name: t("info:flex_savings"),
-            href: "https://github.com/Bella-DeFinTech",
+            href: "https://fs.bella.fi/",
           },
           {
             name: t("info:lp_farm"),
