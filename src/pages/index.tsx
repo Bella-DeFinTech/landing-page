@@ -174,7 +174,7 @@ export default function Home() {
           </button>
         </div>
         <div className="intro flex h-center v-center">
-          <img src="/images/intro.png?v=1" />
+          <img src="/images/intro.webp" />
         </div>
         <div className="what">
           <div>
