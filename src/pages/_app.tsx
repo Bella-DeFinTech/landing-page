@@ -28,7 +28,7 @@ export default ({ Component }: AppProps) => {
     const { locale } = router.query;
     const lang = locale || url.searchParams.get("locale");
 
-    if (!lang) {
+    if (!["en", "tr", "zh_cn"].includes(lang as string)) {
       router.replace("/?locale=en", undefined, { shallow: true });
       return;
     }
