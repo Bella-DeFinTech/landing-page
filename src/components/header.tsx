@@ -1,5 +1,3 @@
-"use client";
-
 import { useRouter } from "next/router";
 import { Menu, MenuItem } from "./menu";
 import { useCallback, useRef, useEffect } from "react";
@@ -9,16 +7,16 @@ import { Modal } from "./modal";
 import { Overlay } from "./overlay";
 import SelectMenu from "./select-menu";
 import { launchApp, useData } from "./menus";
-import { useTranslation } from "next-i18next";
+import { useLocale } from "libs/components/locale";
 
 const LanToggle = ({ onLanChange }: { onLanChange: (v: number) => void }) => {
-  const { t } = useTranslation(["lang"]);
-
+  const { data } = useLocale();
+  const t = data.lang;
   return (
     <div className="root">
       <Menu onSelect={onLanChange}>
         {["en", "tr", "zh_cn"].map((v) => (
-          <MenuItem key={v}>{t(v)}</MenuItem>
+          <MenuItem key={v}>{t[v as "en" | "tr" | "zh_cn"]}</MenuItem>
         ))}
       </Menu>
       <style jsx>
@@ -36,11 +34,11 @@ const LanToggle = ({ onLanChange }: { onLanChange: (v: number) => void }) => {
 
 export default () => {
   const router = useRouter();
-  const { pathname, asPath, query } = router;
   const ref = useRef<HTMLDivElement>(null);
   const [isShowOverlay, toggleOverlay] = useToggle(false);
   const [isShowMenu, toggleMenu] = useToggle(false);
   const { menus } = useData();
+  const { pathname, query, asPath, locale } = router;
 
   useLockBodyScroll(isShowOverlay);
 

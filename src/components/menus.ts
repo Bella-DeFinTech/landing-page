@@ -1,4 +1,5 @@
-import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import { useLocale } from "./locale";
 
 export const launchApp = {
   name: "Launch App",
@@ -15,49 +16,52 @@ export const medias = [
 
 type List = [string, { name: string; href: string }[]][];
 export const useData = () => {
-  const { t, i18n } = useTranslation(["routes", "info"]);
+  const { locale } = useRouter();
+  const { data } = useLocale();
+  const t = { ...data.info, ...data.routes };
+
   return {
     menus: [
       [
-        t("routes:document"),
+        t.document,
         [
           {
-            name: t("info:flex_savings"),
+            name: t.flex_savings,
             href: "https://bellafi.gitbook.io/bella-protocol/",
           },
           {
-            name: t("info:lp_farm"),
+            name: t.lp_farm,
             href: "https://bellafi.gitbook.io/bella-protocol/lp-farm/about-bella-lp-farm",
           },
           {
-            name: t("info:tuner"),
+            name: t.tuner,
             href: "https://docs.bella.fi/getting-started/readme",
           },
         ],
       ],
       [
-        t("info:developers"),
+        t.developers,
         [
           { name: "Github Repo", href: "https://github.com/Bella-DeFinTech" },
           {
-            name: t("info:tuner"),
+            name: t.tuner,
             href: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
           },
         ],
       ],
       [
-        t("info:products"),
+        t.products,
         [
           {
-            name: t("info:flex_savings"),
+            name: t.flex_savings,
             href: "https://fs.bella.fi/",
           },
           {
-            name: t("info:lp_farm"),
+            name: t.lp_farm,
             href: "http://lpfarm.bella.fi/",
           },
           {
-            name: t("info:tuner"),
+            name: t.tuner,
             href: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
           },
         ],
@@ -65,48 +69,48 @@ export const useData = () => {
     ],
     infos: [
       [
-        t("info:resources"),
+        t.resources,
         [
           {
-            name: [t("info:flex_savings"), t("routes:document")].join(
-              i18n.language === "zh_cn" ? "" : " "
+            name: [t.flex_savings, t.document].join(
+              locale === "zh_cn" ? "" : " "
             ),
             href: "https://bellafi.gitbook.io/bella-protocol/",
           },
           {
             name:
-              i18n.language === "zh_cn"
+              locale === "zh_cn"
                 ? "LP Farm文档"
-                : i18n.language === "en"
+                : locale === "en"
                 ? "LP Farm Docs"
                 : "LP Farm dokümanlar",
             href: "https://bellafi.gitbook.io/bella-protocol/lp-farm/about-bella-lp-farm",
           },
           {
-            name: t("info:tuner_started"),
+            name: t.tuner_started,
             href: "https://docs.bella.fi/getting-started/readme",
           },
           {
-            name: t("info:brand_assets"),
+            name: t.brand_assets,
             href: "https://drive.google.com/drive/folders/1aYDMQkdK8OgKItiG9V2-u0SByZDHdGuy?usp=sharing",
           },
         ],
       ],
       [
-        t("info:foundation"),
+        t.foundation,
         [
-          { name: t("info:contact"), href: "mailto:contact@bella.fi" },
+          { name: t.contact, href: "mailto:contact@bella.fi" },
           {
-            name: t("info:venture_fund"),
+            name: t.venture_fund,
             href: "https://bellaofficial.medium.com/bella-foundation-launches-20-mil-usd-venture-fund-as-an-effort-to-scale-bella-ecosystem-9b5b3a0da4e3",
           },
         ],
       ],
       [
-        t("info:developers"),
+        t.developers,
         [
           {
-            name: t("info:tuner"),
+            name: t.tuner,
             href: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
           },
         ],

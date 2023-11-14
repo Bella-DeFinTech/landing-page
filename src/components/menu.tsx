@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import cx from "classnames";
 import useClickAway from "react-use/lib/useClickAway";
-import { useTranslation } from "next-i18next";
+import { useLocale, type Locales } from "./locale";
+import { useRouter } from "next/router";
 
 interface IProps {
   hoverColor?: string;
@@ -10,7 +11,7 @@ interface IProps {
 }
 
 export const Menu = ({ children, hoverColor, onSelect }: IProps) => {
-  const [t, i18n] = useTranslation();
+  const { locale } = useRouter();
   const ref = useRef<HTMLUListElement>(null);
   useClickAway(ref, () => {
     setShowList(false);
@@ -25,11 +26,7 @@ export const Menu = ({ children, hoverColor, onSelect }: IProps) => {
   return (
     <ul ref={ref} className="root" onClick={handleClick}>
       <i className="icon">
-        {i18n.language === "en"
-          ? "EN"
-          : i18n.language === "zh_cn"
-          ? "ZH"
-          : "TR"}
+        {locale === "en" ? "EN" : locale === "zh_cn" ? "ZH" : "TR"}
       </i>
       <ul className={cx("list", { active: showList })}>
         {React.Children.map(children, (v, i) => (

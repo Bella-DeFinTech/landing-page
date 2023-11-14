@@ -1,12 +1,13 @@
-import { useTranslation } from "next-i18next";
 import cx from "classnames";
+import { useLocale } from "./locale";
 
 export default () => {
-  const { t } = useTranslation(["routes"]);
+  const { data } = useLocale();
+  const t = data.routes;
   return (
     <div className="root">
       <div style={{ position: "absolute", top: -36 }} id="investors"></div>
-      <h1>{t("investors")}</h1>
+      <h1>{t.investors}</h1>
       <div className="list">
         {[
           { link: "https://www.binance.com/en", icon: "binance_new.webp" },
