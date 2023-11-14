@@ -2,23 +2,9 @@ import { FeatureItem } from "libs/components/feature";
 import { PSuiteItem } from "libs/components/psuite";
 import Head from "next/head";
 import * as React from "react";
-// import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import { type Locales } from "libs/components/locale";
 import Header from "libs/components/header";
 import Footer from "libs/components/footer";
-
-// export const getStaticProps: GetStaticProps<{ data: Locales }, any> = async ({
-//   locale,
-//   defaultLocale,
-// }) => {
-//   const data = await fetchLocale(locale ?? defaultLocale ?? "en");
-
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// };
 
 export default function Home({ data }: { data: Locales }) {
   const t = data.landing_page;

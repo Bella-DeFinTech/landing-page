@@ -25,10 +25,11 @@ export default ({ Component }: AppProps) => {
   }, [router.events]);
 
   useEffect(() => {
-    fetchLocale(router.locale ?? router.defaultLocale ?? "en").then((d) => {
+    const { locale } = router.query;
+    fetchLocale((locale as string) ?? "en").then((d) => {
       setData(d);
     });
-  }, [router.locale, router.defaultLocale]);
+  }, [router.query.locale]);
 
   if (!data) return null;
 
@@ -38,31 +39,3 @@ export default ({ Component }: AppProps) => {
     </LocaleContext.Provider>
   );
 };
-// const MyApp = ({ Component, pageProps }: AppProps) => {
-//   const router = useRouter();
-//   useEffect(() => {
-//     initGA();
-//     if (!router.asPath.includes("?")) {
-//       logPageView();
-//     }
-//   }, []);
-
-//   useEffect(() => {
-//     router.events.on("routeChangeComplete", logPageView);
-//     return () => {
-//       router.events.off("routeChangeComplete", logPageView);
-//     };
-//   }, [router.events]);
-
-//   return (
-//     <>
-//       <Component {...pageProps} />
-//     </>
-//   );
-// };
-
-// export default (props: any) => (
-//   <LocaleContext.Provider value={{ data: props.pageProps.data }}>
-//     <MyApp {...props} />
-//   </LocaleContext.Provider>
-// );

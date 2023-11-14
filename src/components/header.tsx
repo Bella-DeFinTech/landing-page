@@ -53,8 +53,9 @@ export default () => {
   }, [router.query.route]);
 
   const handleLanChange = useCallback((i: number) => {
-    router.push({ pathname, query }, asPath, {
-      locale: ["en", "tr", "zh_cn"][i],
+    const locale = ["en", "tr", "zh_cn"][i];
+    router.push(`/${locale}`, undefined, {
+      locale,
     });
   }, []);
 

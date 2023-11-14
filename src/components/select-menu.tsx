@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 export default () => {
   const { menus } = useData();
   const router = useRouter();
-  const { pathname, asPath, query, locale } = router;
+  const { query } = router;
+  const locale = query.locale as string;
   return (
     <div className="root">
       <ul className="menu">
@@ -26,9 +27,11 @@ export default () => {
       <i
         className="icon"
         onClick={() => {
-          const i = locale === "en" ? 1 : locale === "tr" ? 2 : 0;
-          router.push({ pathname, query }, asPath, {
-            locale: ["en", "tr", "zh_cn"][i],
+          const locales = ["en", "zh_cn", "tr"];
+          const i = locales.indexOf(locale ?? "en");
+          const nextLoale = locales[(i + 1) % 3];
+          router.push(`/${nextLoale}`, undefined, {
+            locale: nextLoale,
           });
         }}
       >
