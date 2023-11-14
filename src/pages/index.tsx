@@ -2,68 +2,25 @@ import { FeatureItem } from "libs/components/feature";
 import { PSuiteItem } from "libs/components/psuite";
 import Head from "next/head";
 import * as React from "react";
-import type { GetStaticProps, InferGetStaticPropsType } from "next";
-import { type Locales, fetchLocale } from "libs/components/locale";
-import { useRouter } from "next/router";
+// import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import { type Locales } from "libs/components/locale";
 import Header from "libs/components/header";
 import Footer from "libs/components/footer";
 
-export const getStaticProps: GetStaticProps<{ data: Locales }, any> = async ({
-  locale,
-  defaultLocale,
-}) => {
-  const data = await fetchLocale(locale ?? defaultLocale ?? "en");
+// export const getStaticProps: GetStaticProps<{ data: Locales }, any> = async ({
+//   locale,
+//   defaultLocale,
+// }) => {
+//   const data = await fetchLocale(locale ?? defaultLocale ?? "en");
 
-  return {
-    props: {
-      data,
-    },
-  };
-};
-
-// export async function getStaticPaths() {
 //   return {
-//     paths: ["/zh_cn", "/tr", "/en"],
-//     fallback: false,
+//     props: {
+//       data,
+//     },
 //   };
-// }
-
-// export default ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
-//   const router = useRouter();
-//   const { asPath, pathname, query } = router;
-//   return (
-//     <div>
-//       {data.landing_page.automation}
-//       <button
-//         onClick={() => {
-//           router.push({ pathname, query }, asPath, { locale: "zh_cn" });
-//         }}
-//       >
-//         zh-cn
-//       </button>
-//       <button
-//         onClick={() => {
-//           router.push({ pathname, query }, asPath, { locale: "en" });
-//         }}
-//       >
-//         en
-//       </button>
-//       <button
-//         onClick={() => {
-//           router.push({ pathname, query }, asPath, { locale: "tr" });
-//         }}
-//       >
-//         tr
-//       </button>
-//     </div>
-//   );
 // };
 
-export default function Home({
-  data,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-  // console.log(data && true);
-
+export default function Home({ data }: { data: Locales }) {
   const t = data.landing_page;
   const infoT = data.info;
   const [d, setD] = React.useState("");
@@ -227,7 +184,6 @@ export default function Home({
             <p>{t.current_defi_products_are_blocking}</p>
           </div>
           <img src="/images/what.png" />
-          {/* <i className="icon"></i> */}
         </div>
         <div className="features" style={{ position: "relative" }}>
           <div id="features" style={{ position: "absolute", top: -22 }}></div>
@@ -238,10 +194,6 @@ export default function Home({
                 name: t.zero_gas_fee,
                 descr: t.zero_gas_fee_we_believe_everyone,
               },
-              // {
-              //   name: t("boosted_rewards"),
-              //   descr: t("br_info"),
-              // },
               {
                 name: t.lower_volatility,
                 descr: t.lv_info,
