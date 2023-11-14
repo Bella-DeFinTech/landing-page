@@ -25,8 +25,16 @@ export default ({ Component }: AppProps) => {
   }, [router.events]);
 
   useEffect(() => {
+    const url = new URL(location.href);
     const { locale } = router.query;
-    fetchLocale((locale as string) ?? "en").then((d) => {
+    const lang = locale || url.searchParams.get("locale");
+
+    if (!lang) {
+      router.replace("/?locale=en", undefined, { shallow: true });
+      return;
+    }
+
+    fetchLocale(lang as string).then((d) => {
       setData(d);
     });
   }, [router.query.locale]);

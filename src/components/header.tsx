@@ -54,7 +54,7 @@ export default () => {
 
   const handleLanChange = useCallback((i: number) => {
     const locale = ["en", "tr", "zh_cn"][i];
-    router.push(`/${locale}`, undefined, {
+    router.push(`?locale=${locale}`, undefined, {
       locale,
     });
   }, []);

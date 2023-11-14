@@ -30,7 +30,7 @@ export default () => {
           const locales = ["en", "zh_cn", "tr"];
           const i = locales.indexOf(locale ?? "en");
           const nextLoale = locales[(i + 1) % 3];
-          router.push(`/${nextLoale}`, undefined, {
+          router.push(`?locale=${nextLoale}`, undefined, {
             locale: nextLoale,
           });
         }}
