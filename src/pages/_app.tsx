@@ -1,5 +1,4 @@
 import "libs/styles/globals.css";
-
 import type { AppProps } from "next/app";
 import { initGA, logPageView } from "../ga";
 import { useEffect, useState } from "react";
