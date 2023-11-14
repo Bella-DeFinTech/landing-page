@@ -1,13 +1,14 @@
-import { useTranslation } from "next-i18next";
 import cx from "classnames";
+import { useLocale } from "./locale";
 
 export default () => {
-  const { t } = useTranslation(["routes"]);
+  const { data } = useLocale();
+  const t = data.routes;
 
   return (
     <div className="root">
       <div id="partners" style={{ position: "absolute", top: -36 }}></div>
-      <h1>{t("ecosystem")}</h1>
+      <h1>{t.ecosystem}</h1>
       <div className="list">
         {[
           // Uniswap

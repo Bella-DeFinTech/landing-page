@@ -1,13 +1,14 @@
 import cx from "classnames";
-import { useTranslation } from "next-i18next";
+import { useLocale } from "./locale";
 
 export default () => {
-  const { t } = useTranslation(["routes"]);
+  const { data } = useLocale();
+  const t = data.routes;
 
   return (
     <div className="root">
       <div id="as_seen_on" style={{ position: "absolute", top: -36 }}></div>
-      <h1>{t("as_seen_on")}</h1>
+      <h1>{t.as_seen_on}</h1>
       <div className="list">
         {[
           {

@@ -1,8 +1,18 @@
-import cx from 'classnames'
+import cx from "classnames";
 
-const offsetX = (1.28 / Math.cos(Math.PI * 0.25) - 1.28) / 2
+const offsetX = (1.28 / Math.cos(Math.PI * 0.25) - 1.28) / 2;
 
-export const Menu = ({ className = '', onClick, on = false, colorful = false }: { className?: string, onClick: () => void, colorful?: boolean, on?: boolean }) => (
+export const Menu = ({
+  className = "",
+  onClick,
+  on = false,
+  colorful = false,
+}: {
+  className?: string;
+  onClick: () => void;
+  colorful?: boolean;
+  on?: boolean;
+}) => (
   <div onClick={() => onClick()} className={cx("root", className, { on })}>
     <div className="first"></div>
     <div className="second"></div>
@@ -10,7 +20,7 @@ export const Menu = ({ className = '', onClick, on = false, colorful = false }: 
     <style jsx>
       {`
         .root {
-          height:1.29rem;
+          height: 1.29rem;
           width: 1.29rem;
           position: fixed;
           right: 1.43rem;
@@ -22,9 +32,9 @@ export const Menu = ({ className = '', onClick, on = false, colorful = false }: 
           position: absolute;
           height: 2px;
           border-radius: 1px;
-          background: ${colorful ? 'var(--primary-gradient-color)' : '#7E82A4'};
+          background: ${colorful ? "var(--primary-gradient-color)" : "#7E82A4"};
           left: 0;
-          transition: all .2s;
+          transition: all 0.2s;
         }
 
         .on > div {
@@ -41,7 +51,7 @@ export const Menu = ({ className = '', onClick, on = false, colorful = false }: 
           width: 50%;
           top: 50%;
           transform: translate(0, -50%);
-          transition: opacity .2s;
+          transition: opacity 0.2s;
         }
 
         .third {
@@ -50,12 +60,13 @@ export const Menu = ({ className = '', onClick, on = false, colorful = false }: 
           transform-origin: 0 100%;
         }
 
-        .first, .third {
-          transition: transform .2s;
+        .first,
+        .third {
+          transition: transform 0.2s;
         }
 
-        .on .first{
-          transform: rotate(45deg) translate(${offsetX}rem, -.07rem);
+        .on .first {
+          transform: rotate(45deg) translate(${offsetX}rem, -0.07rem);
         }
 
         .on .second {
@@ -64,9 +75,9 @@ export const Menu = ({ className = '', onClick, on = false, colorful = false }: 
 
         .on .third {
           width: 100%;
-          transform: rotate(-45deg) translate(${offsetX}rem, .07rem);
+          transform: rotate(-45deg) translate(${offsetX}rem, 0.07rem);
         }
       `}
     </style>
   </div>
-)
+);

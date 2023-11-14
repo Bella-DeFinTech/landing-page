@@ -1,10 +1,10 @@
-import { useTranslation } from "next-i18next";
 import Investors from "./investors";
 import AsSeen from "./as-seen";
 import Partners from "./partner";
 import { medias, useData } from "./menus";
 import { useCallback, useRef, useState } from "react";
 import { subscribe } from "./subscribe";
+import { useLocale } from "./locale";
 
 const isEmail = (email: string) => {
   const pattern =
@@ -13,10 +13,11 @@ const isEmail = (email: string) => {
 };
 
 const Audited = () => {
-  const { t } = useTranslation(["footer"]);
+  const { data } = useLocale();
+  const t = data.footer;
   return (
     <div className="root">
-      <h1>{t("audited_by")}</h1>
+      <h1>{t.audited_by}</h1>
 
       <div>
         {/* <div className="ds icon"></div> */}
@@ -114,7 +115,8 @@ const Audited = () => {
 };
 
 export default () => {
-  const { t } = useTranslation("info");
+  const { data } = useLocale();
+  const t = data.info;
   const inputRef = useRef<HTMLInputElement>(null);
   const subscribed_timeout = useRef<number>(-1);
   const [{ subscribing, subscribed }, setSubscribing] = useState({
@@ -199,22 +201,22 @@ export default () => {
             ))}
           </div>
           <div className="sc">
-            <p>{t("subscribe_to")}</p>
+            <p>{t.subscribe_to}</p>
             <div>
               <input
                 disabled={subscribing || subscribed}
                 ref={inputRef}
-                placeholder={t("your_email")}
+                placeholder={t.your_email}
               />
               <button
                 disabled={subscribing || subscribed}
                 onClick={handleSubscribe}
               >
                 {subscribed
-                  ? `${t("subscribed")}!`
+                  ? `${t.subscribed}!`
                   : subscribing
-                  ? `${t("subscribing")}..`
-                  : t("sub_now")}
+                  ? `${t.subscribing}..`
+                  : t.sub_now}
               </button>
             </div>
           </div>

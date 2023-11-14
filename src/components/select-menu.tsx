@@ -1,12 +1,10 @@
-import { useTranslation } from "next-i18next";
 import { launchApp, useData } from "./menus";
 import { useRouter } from "next/router";
 
 export default () => {
-  const { t, i18n } = useTranslation(["routes"]);
   const { menus } = useData();
   const router = useRouter();
-  const { pathname, asPath, query } = router;
+  const { pathname, asPath, query, locale } = router;
   return (
     <div className="root">
       <ul className="menu">
@@ -28,17 +26,13 @@ export default () => {
       <i
         className="icon"
         onClick={() => {
-          const i = i18n.language === "en" ? 1 : i18n.language === "tr" ? 2 : 0;
+          const i = locale === "en" ? 1 : locale === "tr" ? 2 : 0;
           router.push({ pathname, query }, asPath, {
             locale: ["en", "tr", "zh_cn"][i],
           });
         }}
       >
-        {i18n.language === "en"
-          ? "EN"
-          : i18n.language === "zh_cn"
-          ? "ZH"
-          : "TR"}
+        {locale === "en" ? "EN" : locale === "zh_cn" ? "ZH" : "TR"}
       </i>
 
       <a href={launchApp.href} target="__blank" rel="noopener noreferrer">

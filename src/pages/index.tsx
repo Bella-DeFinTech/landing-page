@@ -2,27 +2,70 @@ import { FeatureItem } from "libs/components/feature";
 import { PSuiteItem } from "libs/components/psuite";
 import Head from "next/head";
 import * as React from "react";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import { type Locales, fetchLocale } from "libs/components/locale";
+import { useRouter } from "next/router";
+import Header from "libs/components/header";
+import Footer from "libs/components/footer";
 
-export async function getStaticProps({ locale }: any) {
+export const getStaticProps: GetStaticProps<{ data: Locales }, any> = async ({
+  locale,
+  defaultLocale,
+}) => {
+  const data = await fetchLocale(locale ?? defaultLocale ?? "en");
+
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "common",
-        "footer",
-        "info",
-        "landing_page",
-        "lang",
-        "routes",
-      ])),
+      data,
     },
   };
-}
+};
 
-export default function Home() {
-  const { t } = useTranslation(["landing_page"]);
-  const { t: infoT } = useTranslation("info");
+// export async function getStaticPaths() {
+//   return {
+//     paths: ["/zh_cn", "/tr", "/en"],
+//     fallback: false,
+//   };
+// }
+
+// export default ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+//   const router = useRouter();
+//   const { asPath, pathname, query } = router;
+//   return (
+//     <div>
+//       {data.landing_page.automation}
+//       <button
+//         onClick={() => {
+//           router.push({ pathname, query }, asPath, { locale: "zh_cn" });
+//         }}
+//       >
+//         zh-cn
+//       </button>
+//       <button
+//         onClick={() => {
+//           router.push({ pathname, query }, asPath, { locale: "en" });
+//         }}
+//       >
+//         en
+//       </button>
+//       <button
+//         onClick={() => {
+//           router.push({ pathname, query }, asPath, { locale: "tr" });
+//         }}
+//       >
+//         tr
+//       </button>
+//     </div>
+//   );
+// };
+
+export default function Home({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  // console.log(data && true);
+
+  const t = data.landing_page;
+  const infoT = data.info;
   const [d, setD] = React.useState("");
   const [eventIsLaunch, setLiquidityIsOn] = React.useState(true); // set true means disable counting down
   const [currServerDateString, setCurrServerDateString] = React.useState("");
@@ -132,12 +175,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico?v2" />
       </Head>
+      <Header />
       <div className="root flex c v-center" id="about">
         <h1>
           <div ref={indicatorRef} className="indicator"></div>
-          {t("one_click_crypto_banking")}
+          {t.one_click_crypto_banking}
         </h1>
-        <h2>{t("a_suite_of_defi_products")}</h2>
+        <h2>{t.a_suite_of_defi_products}</h2>
         <div className="actions flex">
           <button className="loan">
             <a
@@ -146,7 +190,7 @@ export default function Home() {
               rel="noopener noreferrer"
               style={{ color: "#00b2f9", margin: "auto" }}
             >
-              {t("info:flex_savings")}
+              {infoT.flex_savings}
             </a>
           </button>
           <button className="deposit" style={{ position: "relative" }}>
@@ -156,7 +200,7 @@ export default function Home() {
               style={{ color: "#FFFFFF", margin: "auto" }}
               rel="noopener noreferrer"
             >
-              {t("info:lp_farm")}
+              {infoT.lp_farm}
             </a>
             <div
               className="new"
@@ -178,33 +222,33 @@ export default function Home() {
         </div>
         <div className="what">
           <div>
-            <h1>{t("what_is_bella")}</h1>
+            <h1>{t.what_is_bella}</h1>
             <p className="small"></p>
-            <p>{t("current_defi_products_are_blocking")}</p>
+            <p>{t.current_defi_products_are_blocking}</p>
           </div>
           <img src="/images/what.png" />
           {/* <i className="icon"></i> */}
         </div>
         <div className="features" style={{ position: "relative" }}>
           <div id="features" style={{ position: "absolute", top: -22 }}></div>
-          <h1>{t("features")}</h1>
+          <h1>{t.features}</h1>
           <div className="list">
             {[
               {
-                name: t("zero_gas_fee"),
-                descr: t("zero_gas_fee_we_believe_everyone"),
+                name: t.zero_gas_fee,
+                descr: t.zero_gas_fee_we_believe_everyone,
               },
               // {
               //   name: t("boosted_rewards"),
               //   descr: t("br_info"),
               // },
               {
-                name: t("lower_volatility"),
-                descr: t("lv_info"),
+                name: t.lower_volatility,
+                descr: t.lv_info,
               },
               {
-                name: t("lower_threshold"),
-                descr: t("lt_info"),
+                name: t.lower_threshold,
+                descr: t.lt_info,
               },
             ]
               .map((v, i) => ({
@@ -225,14 +269,14 @@ export default function Home() {
               ))}
           </div>
           <div className="features psuite" id="product">
-            <h1>{t("product_suite")}</h1>
+            <h1>{t.product_suite}</h1>
             <div>
               <i className="icon"></i>
               <div className="plist">
                 {[
-                  [t("bella_1_click"), t("smart_protal_for_pupular_defi")],
-                  [t("bella_flex_savings"), t("smart_robo_advisor_to_pick")],
-                  ["Bella " + infoT("tuner"), t("tuner_detail")],
+                  [t.bella_1_click, t.smart_protal_for_pupular_defi],
+                  [t.bella_flex_savings, t.smart_robo_advisor_to_pick],
+                  ["Bella " + infoT.tuner, t.tuner_detail],
                 ].map((v, i) => (
                   <div key={i}>
                     <PSuiteItem v={v} />
@@ -243,6 +287,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
       <style jsx>
         {`
           h1 {
