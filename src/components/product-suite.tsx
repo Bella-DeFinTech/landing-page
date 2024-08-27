@@ -1,6 +1,7 @@
 import { CSSProperties, FC } from "react";
 import { Gap } from "./gap";
 import { Title } from "./title";
+import { Translations } from "@/locales/en-US";
 
 const suits = [
   {
@@ -78,21 +79,23 @@ const Suit: FC<{
   );
 };
 
-export const ProductSuit = () => {
+export const ProductSuit = ({
+  translations,
+}: {
+  translations: Translations;
+}) => {
   return (
     <div className="w-[1240px] mx-auto">
       <div className="py-10 flex">
         <Title>PRODUCT SUIT</Title>
         <Gap x={40} />
         <div className="text-lg w-[580px]">
-          Bella enhances your DeFi returns using leading AI algorithms and
-          provides streamlined and optimized solutions for your crypto
-          investments
+          {translations.product_suit.title}
         </div>
       </div>
       <Gap y={104} />
       <div className="flex justify-between">
-        {suits.map((suit, i) => (
+        {translations.product_suit.suits.map((suit, i) => (
           <Suit key={i} name={suit.name} data={suit.data} />
         ))}
       </div>

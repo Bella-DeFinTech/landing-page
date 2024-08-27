@@ -3,7 +3,7 @@
 }
 
 .card {
-  @apply p-[50px] w-[600px] h-[480px] rounded-3xl;
+  @apply p-[50px] w-[600px] min-h-[480px] rounded-3xl;
 }
 
 .card:nth-child(1),

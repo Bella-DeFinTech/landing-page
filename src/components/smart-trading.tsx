@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Title } from "./title";
+import { Translations } from "@/locales/en-US";
 
 const agents = [
   {
@@ -50,14 +51,18 @@ const List: FC<{ title: string; data: typeof yields }> = ({ data, title }) => (
   </div>
 );
 
-export const SmartTrading = () => {
+export const SmartTrading = ({
+  translations,
+}: {
+  translations: Translations;
+}) => {
   return (
     <div className="w-[1240px] mx-auto py-[85px] px-[60px] bg-[#141418] rounded-3xl flex flex-col gap-y-8">
-      <List title="AI Agent" data={agents} />
+      <List title="AI Agent" data={translations.ai_agents} />
       <div className="h-[70px] text-3xl font-medium">+</div>
-      <List title="DeFI Yield" data={yields} />
+      <List title="DeFI Yield" data={translations.defi_yields} />
       <div className="h-[70px] text-3xl font-medium">=</div>
-      <Title>Smart Trading</Title>
+      <Title>Vision</Title>
     </div>
   );
 };

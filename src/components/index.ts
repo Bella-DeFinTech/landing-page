@@ -5,5 +5,5 @@ export { Navigation } from "./nav";
 export { Ecos } from "./ecos";
 export { ProductSuit } from "./product-suite";
 export { SmartTrading } from "./smart-trading";
-export { DemocratizingCryptoTrading } from "./democratizing-crypto-trading";
+export { UseCase } from "./usecase";
 export { Footer } from "./footer";

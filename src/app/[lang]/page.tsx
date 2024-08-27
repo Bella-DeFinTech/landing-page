@@ -5,25 +5,31 @@ import {
   Header,
   Navigation,
   SmartTrading,
-  DemocratizingCryptoTrading,
+  UseCase,
   Footer,
 } from "@/components";
+import { importLang, Locale } from "@/lang";
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const translations = await importLang(lang);
   return (
     <>
-      <Navigation />
+      <Navigation translations={translations} />
       <Gap y={70} />
-      <Header />
+      <Header translations={translations} />
       <Gap y={70} />
       <main>
-        <Ecos />
+        <Ecos translations={translations} />
         <Gap y={40} />
-        <ProductSuit />
+        <ProductSuit translations={translations} />
         <Gap y={104} />
-        <SmartTrading />
+        <SmartTrading translations={translations} />
         <Gap y={104} />
-        <DemocratizingCryptoTrading />
+        <UseCase translations={translations} />
       </main>
       <Footer />
     </>
