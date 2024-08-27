@@ -2,7 +2,7 @@ import Image from "next/image";
 import { LangSwitch } from "./lang-switch";
 
 export const Navigation = () => (
-  <nav className="pt-10">
+  <nav className="pt-10 sticky top-[-20px] bg-[rgba(0,0,0,.6)] z-10 backdrop-blur-sm">
     <div className="h-[68px] 1440:px-[100px] 1440:w-auto w-[1240px] mx-auto flex items-center">
       <div className="flex items-center text-white font-medium text-[40px]">
         <Image
