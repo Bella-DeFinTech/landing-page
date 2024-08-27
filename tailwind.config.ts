@@ -23,6 +23,10 @@ const config: Config = {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
+        ".drop-shadow-x": {
+          filter:
+            "drop-shadow(0 5px 1px rgb(25 26 35 / 1)) drop-shadow(0 5px 2px rgb(25 26 35 / 0.5))",
+        },
         ".lang-switch": {
           animation: "fadeIn 0.35s cubic-bezier(0.33, 1, 0.68, 1)",
           transformOrigin: "50% 0",

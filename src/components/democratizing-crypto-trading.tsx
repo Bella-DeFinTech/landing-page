@@ -69,17 +69,12 @@ export const DemocratizingCryptoTrading = () => {
     <div className="w-[1240px] mx-auto">
       <div className="flex justify-between">
         <Title>Democratizing Crypto Trading</Title>
-        <div className="text-lg w-[580px]">
-          Bella enhances your DeFi returns using leading AI algorithms and
-          provides streamlined and optimized solutions for your crypto
-          investments
-        </div>
       </div>
       <Gap y={40} />
       <div className="grid grid-cols-2 gap-10">
         {cards.map((c, i) => {
           return (
-            <div key={i} className={cardStyles.card}>
+            <div key={i} className={clsx(cardStyles.card, "drop-shadow-x")}>
               <div className="flex h-full gap-x-1">
                 <div>
                   <div>

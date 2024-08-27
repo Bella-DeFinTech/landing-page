@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import { Gap } from "./gap";
 import { Title } from "./title";
 
@@ -53,7 +53,7 @@ const Suit: FC<{
         {data.map((item, i) => (
           <div
             key={i}
-            className="bg-[#141418] rounded-3xl px-9 py-10 min-h-[330px]"
+            className="bg-[#141418] rounded-3xl px-9 py-10 min-h-[330px] drop-shadow-x border-[#191A23] border"
           >
             <div className="font-medium text-[26px] flex items-center gap-x-4 border-b border-white pb-4 mb-7">
               <svg
@@ -90,6 +90,7 @@ export const ProductSuit = () => {
           investments
         </div>
       </div>
+      <Gap y={104} />
       <div className="flex justify-between">
         {suits.map((suit, i) => (
           <Suit key={i} name={suit.name} data={suit.data} />

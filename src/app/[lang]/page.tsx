@@ -18,10 +18,11 @@ export default function Home() {
       <Gap y={70} />
       <main>
         <Ecos />
+        <Gap y={40} />
         <ProductSuit />
-        <Gap y={40} />
+        <Gap y={104} />
         <SmartTrading />
-        <Gap y={40} />
+        <Gap y={104} />
         <DemocratizingCryptoTrading />
       </main>
       <Footer />

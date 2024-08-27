@@ -112,7 +112,7 @@ export const Ecos = () => {
           ))}
         </div>
       </div>
-      <Gap y={40} />
+      <Gap y={80} />
       <Info />
     </>
   );
