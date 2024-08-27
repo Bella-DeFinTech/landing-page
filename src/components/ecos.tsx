@@ -19,7 +19,7 @@ const list = [
     alt: "phoenix",
   },
   {
-    url: "https://smarter.uniswap.org/",
+    url: "https://uniswap.org/",
     src: "/assets/partners/2.svg",
     width: 171,
     height: 43,
