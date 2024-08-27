@@ -35,3 +35,5 @@ export const Button = forwardRef<
     {...others}
   />
 ));
+
+Button.displayName = "Button";
