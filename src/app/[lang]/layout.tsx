@@ -16,7 +16,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico?v3" sizes="any" />
+        <link rel="icon" href="/favicon.ico?v4" sizes="any" />
       </head>
       <body>{children}</body>
     </html>

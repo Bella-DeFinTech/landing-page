@@ -85,7 +85,7 @@ export const ProductSuit = ({
   translations: Translations;
 }) => {
   return (
-    <div className="w-[1240px] mx-auto">
+    <div>
       <div className="py-10 flex">
         <Title>PRODUCT SUIT</Title>
         <Gap x={40} />

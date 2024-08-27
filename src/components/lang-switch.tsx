@@ -12,6 +12,7 @@ export const LangSwitch = () => {
   const params = useParams();
   const { lang } = params;
   const [showMenu, setShowMenu] = useState(false);
+  const [hideMenu, setHideMenu] = useState(true);
   useEffect(() => {
     const onClick = (e: Event) => {
       setShowMenu(false);
@@ -34,6 +35,7 @@ export const LangSwitch = () => {
         outline
         onClick={() => {
           setShowMenu(true);
+          setHideMenu(false);
         }}
       >
         {langs.find((la) => la.code === lang)?.name}
@@ -56,22 +58,26 @@ export const LangSwitch = () => {
       </Button>
       <div
         className={clsx(
-          "absolute bg-white text-black rounded-lg w-[220px] top-full right-0",
+          "absolute bg-white text-black rounded-lg w-[220px] top-full right-0 px-2 py-2",
           {
-            "block lang-switch": showMenu,
-            hidden: !showMenu,
+            "lang-switch-on block": showMenu && !hideMenu,
+            "lang-switch-off block": !showMenu && !hideMenu,
+            hidden: hideMenu,
           }
         )}
+        onAnimationEnd={() => {
+          if (!showMenu) {
+            setHideMenu(true);
+          }
+        }}
       >
         {langs
           .filter((la) => la.code !== lang)
           .map((la) => (
-            <Link
-              href={"/" + la.code}
-              key={la.code}
-              className="block py-5 pl-5"
-            >
-              {la.name}
+            <Link href={"/" + la.code} key={la.code} className="block group">
+              <div className="rounded-lg transition-colors duration-200 group-hover:bg-black group-hover:text-white p-5 h-full">
+                {la.name}
+              </div>
             </Link>
           ))}
       </div>

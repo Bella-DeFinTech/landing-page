@@ -4,7 +4,7 @@ import { Illustration } from "./illustration";
 
 export const Header = ({ translations }: { translations: Translations }) => {
   return (
-    <header className="max-w-[1240px] mx-auto">
+    <header>
       <div className="flex justify-between">
         <div className="w-[531px] flex flex-col gap-y-[35px]">
           <p className="font-medium text-[60px] leading-[76px]">

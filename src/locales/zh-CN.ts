@@ -1,4 +1,4 @@
-export default {
+const zhCN = {
   title: "让AI在加密交易中大显身手",
   subTitle: "最大化您的交易和流动性挖矿收益",
   metrics: ["100,000+|用户数量", "236%|收益率", "3.2%-3.5%|夏普比率"],
@@ -123,3 +123,5 @@ export default {
     ],
   },
 };
+
+export default zhCN;

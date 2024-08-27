@@ -5,35 +5,45 @@ import { Translations } from "@/locales/en-US";
 
 const list = [
   {
-    name: "Tidal",
-    url: "https://tidal.finance/",
-    src: "/assets/ecos/tidal.svg",
-    width: 192,
-    height: 50,
-    alt: "tidal",
+    url: "https://www.binance.com/",
+    src: "/assets/partners/0.svg",
+    width: 215,
+    height: 43,
+    alt: "binance",
   },
   {
-    name: "Tidal",
-    url: "https://tidal.finance/",
-    src: "/assets/ecos/tidal.svg",
-    width: 192,
-    height: 50,
-    alt: "tidal",
+    url: "https://www.phoenix.global/",
+    src: "/assets/partners/1.svg",
+    width: 236,
+    height: 43,
+    alt: "phoenix",
   },
   {
-    name: "Tidal",
-    url: "https://tidal.finance/",
-    src: "/assets/ecos/tidal.svg",
-    width: 192,
-    height: 50,
-    alt: "tidal",
+    url: "https://smarter.uniswap.org/",
+    src: "/assets/partners/2.svg",
+    width: 171,
+    height: 43,
+    alt: "uniswap",
   },
   {
-    name: "Tidal",
+    url: "https://curve.fi/",
+    src: "/assets/partners/3.svg",
+    width: 164,
+    height: 43,
+    alt: "curve",
+  },
+  {
+    url: "https://izumi.finance/",
+    src: "/assets/partners/4.svg",
+    width: 125,
+    height: 43,
+    alt: "izumi",
+  },
+  {
     url: "https://tidal.finance/",
-    src: "/assets/ecos/tidal.svg",
-    width: 192,
-    height: 50,
+    src: "/assets/partners/5.svg",
+    width: 136,
+    height: 35,
     alt: "tidal",
   },
 ];
@@ -74,7 +84,7 @@ const Item: FC<{
 };
 
 const Info = ({ translations }: { translations: Translations }) => (
-  <div className="w-[1308px] mx-auto bg-[#141418] rounded-3xl py-[70px] px-[60px]">
+  <div className="bg-[#141418] rounded-3xl py-[70px] px-[60px] mx-[-34px]">
     <div className="flex">
       {translations.metrics.map((data, i, list) => (
         <Item isLast={i === list.length - 1} key={i} data={data} />
@@ -86,7 +96,7 @@ const Info = ({ translations }: { translations: Translations }) => (
 export const Ecos = ({ translations }: { translations: Translations }) => {
   return (
     <>
-      <div className="max-w-[1225px] mx-auto">
+      <div>
         <div className="flex h-[52px] items-center gap-x-9">
           {list.map((item, index) => (
             <a key={index} href={item.url} target="_blank">

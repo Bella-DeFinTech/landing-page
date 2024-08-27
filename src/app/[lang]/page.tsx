@@ -20,18 +20,21 @@ export default async function Home({
     <>
       <Navigation translations={translations} />
       <Gap y={70} />
-      <Header translations={translations} />
-      <Gap y={70} />
-      <main>
-        <Ecos translations={translations} />
-        <Gap y={40} />
-        <ProductSuit translations={translations} />
-        <Gap y={104} />
-        <SmartTrading translations={translations} />
-        <Gap y={104} />
-        <UseCase translations={translations} />
+      <main className="max-w-8xl mx-auto">
+        <div className="px-[100px]">
+          <Header translations={translations} />
+          <Gap y={70} />
+          <Ecos translations={translations} />
+          <Gap y={40} />
+          <ProductSuit translations={translations} />
+          <Gap y={104} />
+          <SmartTrading translations={translations} />
+          <Gap y={104} />
+          <UseCase translations={translations} />
+          <Gap y={104} />
+          <Footer />
+        </div>
       </main>
-      <Footer />
     </>
   );
 }

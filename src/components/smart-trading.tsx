@@ -57,7 +57,7 @@ export const SmartTrading = ({
   translations: Translations;
 }) => {
   return (
-    <div className="w-[1240px] mx-auto py-[85px] px-[60px] bg-[#141418] rounded-3xl flex flex-col gap-y-8">
+    <div className="py-[85px] px-[60px] bg-[#141418] rounded-3xl flex flex-col gap-y-8">
       <List title="AI Agent" data={translations.ai_agents} />
       <div className="h-[70px] text-3xl font-medium">+</div>
       <List title="DeFI Yield" data={translations.defi_yields} />

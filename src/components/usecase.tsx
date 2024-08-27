@@ -3,6 +3,7 @@ import { Title } from "./title";
 import clsx from "clsx";
 import cardStyles from "./trading.module.scss";
 import { Translations } from "@/locales/en-US";
+import Image from "next/image";
 
 const cards = [
   {
@@ -51,7 +52,7 @@ const cards = [
 
 export const UseCase = ({ translations }: { translations: Translations }) => {
   return (
-    <div className="w-[1240px] mx-auto">
+    <div>
       <div className="flex justify-between">
         <Title>{translations.usecase.title}</Title>
       </div>
@@ -103,7 +104,7 @@ export const UseCase = ({ translations }: { translations: Translations }) => {
                       Learn more
                     </div>
                   </div>
-                  <img
+                  <Image
                     src={c.img.src}
                     width={c.img.width}
                     height={c.img.height}

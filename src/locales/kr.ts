@@ -1,4 +1,4 @@
-export default {
+const KR = {
   title: "암호화폐 거래에서 AI의 힘을 발휘하세요",
   subTitle: "거래 및 일드 파밍의 수익을 극대화하세요",
   metrics: ["사용자 수 100,000|명 이상", "236%|수익률", "3.2%-3.5%|샤프 비율"],
@@ -126,3 +126,5 @@ export default {
     ],
   },
 };
+
+export default KR;

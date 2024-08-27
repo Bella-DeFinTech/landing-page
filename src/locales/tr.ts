@@ -1,4 +1,4 @@
-export default {
+const TR = {
   title: "Kripto Ticaretinde Yapay Zekanın Gücünü Ortaya Çıkarın",
   subTitle: "Ticaret ve Yield Farming Getirilerinizi En Üst Düzeye Çıkarın",
   metrics: [
@@ -135,3 +135,5 @@ Yatırım kararlarınızı güçlendirmek için hem kısa vadeli hem de uzun vad
     ],
   },
 };
+
+export default TR;
