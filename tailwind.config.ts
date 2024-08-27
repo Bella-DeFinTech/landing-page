@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -13,8 +14,31 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        "1440": "1440px",
+        "1240": "1240px",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".lang-switch": {
+          animation: "fadeIn 0.35s cubic-bezier(0.33, 1, 0.68, 1)",
+          transformOrigin: "50% 0",
+          "@keyframes fadeIn": {
+            "0%": {
+              opacity: "0",
+              transform: "scaleY(.3)",
+            },
+            "100%": {
+              opacity: "1",
+              transform: "scaleY(1)",
+            },
+          },
+        },
+      });
+    }),
+  ],
 };
 export default config;

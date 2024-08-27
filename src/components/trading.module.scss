@@ -1,0 +1,37 @@
+.title {
+  @apply rounded-md text-[30px] font-medium w-fit px-[7px];
+}
+
+.card {
+  @apply p-[50px] w-[600px] h-[480px] rounded-3xl;
+}
+
+.card:nth-child(1),
+.card:nth-child(4) {
+  @apply bg-white text-black;
+  .title {
+    @apply bg-[#02e8f4] text-black;
+  }
+}
+
+.card:nth-child(2),
+.card:nth-child(5) {
+  @apply bg-[#02e8f4] text-black;
+  .title {
+    @apply bg-white text-black;
+  }
+}
+
+.card:nth-child(3),
+.card:nth-child(6) {
+  @apply bg-[#191a23] text-white;
+  .title {
+    @apply bg-white text-black;
+  }
+  circle {
+    @apply fill-white;
+  }
+  path {
+    @apply fill-black;
+  }
+}
