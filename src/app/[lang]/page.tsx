@@ -7,7 +7,7 @@ import {
   SmartTrading,
   UseCase,
   Footer,
-  ListOn,
+  Exchanges,
 } from "@/components";
 import { Investor } from "@/components/investor";
 import { importLang, Locale } from "@/lang";
@@ -36,7 +36,7 @@ export default async function Home({
           <Gap y={124} />
           <Investor />
           <Gap y={64} />
-          <ListOn />
+          <Exchanges />
           <Gap y={96} />
           <Footer />
         </div>

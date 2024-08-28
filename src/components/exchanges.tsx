@@ -1,10 +1,10 @@
 import { Brands } from "./ecos";
 import { Title } from "./title";
 
-export const ListOn = () => (
+export const Exchanges = () => (
   <div>
     <div className="my-10">
-      <Title>Listed on</Title>
+      <Title>Exchanges</Title>
     </div>
     <div className="my-10">
       <Brands list={[]} />

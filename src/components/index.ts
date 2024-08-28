@@ -7,5 +7,5 @@ export { ProductSuit } from "./product-suite";
 export { SmartTrading } from "./smart-trading";
 export { UseCase } from "./usecase";
 export { Investor } from "./investor";
-export { ListOn } from "./list-on";
+export { Exchanges } from "./exchanges";
 export { Footer } from "./footer";
