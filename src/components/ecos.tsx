@@ -48,6 +48,8 @@ const list = [
   },
 ];
 
+type BrandType = (typeof list)[number];
+
 const Item: FC<{
   isLast: boolean;
   data: string;
@@ -93,23 +95,27 @@ const Info = ({ translations }: { translations: Translations }) => (
   </div>
 );
 
+export const Brands = ({ list }: { list: BrandType[] }) => (
+  <div className="flex h-[52px] items-center gap-x-9">
+    {list.map((item, index) => (
+      <a key={index} href={item.url} target="_blank">
+        <Image
+          className="max-h-[52px]"
+          src={item.src}
+          width={item.width}
+          height={item.height}
+          alt={item.alt}
+        />
+      </a>
+    ))}
+  </div>
+);
+
 export const Ecos = ({ translations }: { translations: Translations }) => {
   return (
     <>
       <div>
-        <div className="flex h-[52px] items-center gap-x-9">
-          {list.map((item, index) => (
-            <a key={index} href={item.url} target="_blank">
-              <Image
-                className="max-h-[52px]"
-                src={item.src}
-                width={item.width}
-                height={item.height}
-                alt={item.alt}
-              />
-            </a>
-          ))}
-        </div>
+        <Brands list={list} />
       </div>
       <Gap y={80} />
       <Info translations={translations} />

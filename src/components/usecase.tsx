@@ -8,44 +8,44 @@ import Image from "next/image";
 const cards = [
   {
     img: {
-      src: "/assets/trading-cards/tokyo-magnifier-web-search-with-elements.png",
-      width: 210,
-      height: 168,
+      src: "/assets/cases/1.svg",
+      width: 291,
+      height: 348,
     },
   },
   {
     img: {
-      src: "/assets/trading-cards/tokyo-selecting-a-value-in-the-browser-window.png",
-      width: 210,
-      height: 148,
+      src: "/assets/cases/4.svg",
+      width: 545,
+      height: 627,
     },
   },
   {
     img: {
-      src: "/assets/trading-cards/tokyo-many-browser-windows-with-different-information.png",
-      width: 210,
-      height: 197,
+      src: "/assets/cases/5.svg",
+      width: 561,
+      height: 496,
     },
   },
   {
     img: {
-      src: "/assets/trading-cards/tokyo-sending-messages-from-one-place-to-another.png",
-      width: 210,
-      height: 194,
+      src: "/assets/cases/3.svg",
+      width: 430,
+      height: 314,
     },
   },
   {
     img: {
-      src: "/assets/trading-cards/tokyo-many-browser-windows-with-different-information.png",
-      width: 210,
-      height: 197,
+      src: "/assets/cases/2.svg",
+      width: 482,
+      height: 509,
     },
   },
   {
     img: {
-      src: "/assets/trading-cards/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png",
-      width: 210,
-      height: 171,
+      src: "/assets/cases/0.svg",
+      width: 213,
+      height: 146,
     },
   },
 ];
@@ -82,34 +82,13 @@ export const UseCase = ({ translations }: { translations: Translations }) => {
                         __html: c.description.replaceAll("\n", "<br/>"),
                       }}
                     />
-                    <div className="text-xl items-center flex gap-x-4 mt-6">
-                      <svg
-                        width="41"
-                        height="42"
-                        viewBox="0 0 41 42"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle
-                          cx="20.5"
-                          cy="20.9888"
-                          r="20.5"
-                          fill="#191A23"
-                        />
-                        <path
-                          d="M11.2501 25.1897C10.5326 25.6039 10.2868 26.5213 10.701 27.2388C11.1152 27.9562 12.0326 28.202 12.7501 27.7878L11.2501 25.1897ZM30.7695 16.877C30.9839 16.0768 30.509 15.2543 29.7088 15.0399L16.6688 11.5458C15.8686 11.3314 15.0461 11.8063 14.8317 12.6065C14.6173 13.4067 15.0921 14.2292 15.8923 14.4436L27.4835 17.5494L24.3776 29.1405C24.1632 29.9407 24.6381 30.7632 25.4383 30.9777C26.2385 31.1921 27.061 30.7172 27.2754 29.917L30.7695 16.877ZM12.7501 27.7878L30.0706 17.7878L28.5706 15.1897L11.2501 25.1897L12.7501 27.7878Z"
-                          fill="#02E8F4"
-                        />
-                      </svg>
-                      Learn more
-                    </div>
                   </div>
                   <Image
                     src={c.img.src}
                     width={c.img.width}
                     height={c.img.height}
                     alt=""
-                    className="flex-none self-center"
+                    className="flex-none w-[206px] self-center"
                   />
                 </div>
               </div>
