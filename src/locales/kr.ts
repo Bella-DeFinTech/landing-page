@@ -3,11 +3,12 @@ const KR = {
   subTitle: "거래 및 일드 파밍의 수익을 극대화하세요",
   metrics: ["사용자 수 100,000|명 이상", "236%|수익률", "3.2%-3.5%|샤프 비율"],
   product_suit: {
+    name: "제품군",
     title:
       "Bella는 최고의 AI 알고리즘을 사용하여 DeFi 수익을 향상시키고 암호화폐 투자에 대한 간결하고 최적화된 솔루션을 제공합니다.",
     suits: [
       {
-        name: "AI Empowered",
+        name: "인공지능",
         data: [
           {
             name: "Bella Signal Bot",
@@ -22,7 +23,7 @@ const KR = {
         ],
       },
       {
-        name: "Asset Management",
+        name: "자산관리",
         data: [
           {
             name: "Flex Savings",
@@ -37,7 +38,7 @@ const KR = {
         ],
       },
       {
-        name: "Optimize Solutions",
+        name: "최적화 솔루션",
         data: [
           {
             name: "Tuner",
@@ -53,6 +54,7 @@ const KR = {
       },
     ],
   },
+  smart_trading: "스마트 거래",
   defi_yields: [
     {
       title: "최적화",

@@ -1,62 +1,24 @@
-import { CSSProperties, FC } from "react";
+import { FC } from "react";
 import { Gap } from "./gap";
 import { Title } from "./title";
 import { Translations } from "@/locales/en-US";
-
-const suits = [
-  {
-    name: "Bella Signa Bot",
-    data: [
-      {
-        name: "Bella Signa Bot",
-        description:
-          "Elevate your trading with AI-driven short and long signals, delivered directly through Telegram",
-      },
-      {
-        name: "Bella Research Bot",
-        description:
-          "Unlock real-time, in-depth market insights and metrics with our Telegram-based crypto LLM bot",
-      },
-    ],
-  },
-  {
-    name: "Asset Management",
-    data: [
-      {
-        name: "Flex Savings",
-        description:
-          "A gas-efficient, smart liquidity pool that auto-compounds your returns",
-      },
-    ],
-  },
-  {
-    name: "Optimize Solutions",
-    data: [
-      {
-        name: "Tuner",
-        description:
-          "A gas-efficient, smart liquidity pool that auto-compounds your returns",
-      },
-    ],
-  },
-];
 
 const Suit: FC<{
   name: string;
   data: { name: string; description: string }[];
 }> = ({ name, data }) => {
   return (
-    <div className="w-[387px]">
-      <div className="font-medium text-[26px] w-[317px] border-b border-white pb-4 mb-8">
+    <div className="flex-1">
+      <div className="font-medium text-2xl 1100:text-[26px] w-[317px] border-b border-white pb-4 mb-8">
         {name}
       </div>
       <div className="flex flex-col gap-y-8">
         {data.map((item, i) => (
           <div
             key={i}
-            className="bg-[#141418] rounded-3xl px-9 py-10 min-h-[330px] drop-shadow-x border-[#191A23] border"
+            className="bg-[#141418] rounded-3xl px-9 py-10 1100:p-6 1100:min-h-[300px] 1380:px-9 1380:py-10 1380:min-h-[330px] drop-shadow-x border-[#191A23] border"
           >
-            <div className="font-medium text-[26px] flex items-center gap-x-4 border-b border-white pb-4 mb-7">
+            <div className="font-medium text-2xl 1100:text-[26px] flex items-center gap-x-4 border-b border-white pb-4 mb-7">
               <svg
                 width="33"
                 height="32"
@@ -71,7 +33,7 @@ const Suit: FC<{
               </svg>
               {item.name}
             </div>
-            <div className="text-xl">{item.description}</div>
+            <div className="text-sm 1100:text-xl">{item.description}</div>
           </div>
         ))}
       </div>
@@ -86,15 +48,14 @@ export const ProductSuit = ({
 }) => {
   return (
     <div>
-      <div className="py-10 flex">
-        <Title>PRODUCT SUIT</Title>
-        <Gap x={40} />
-        <div className="text-lg w-[580px]">
+      <div className="py-10 flex flex-col 1100:flex-row">
+        <Title>{translations.product_suit.name}</Title>
+        <div className="text-lg 840:w-[580px] mt-10 1100:mt-0 1100:ml-10">
           {translations.product_suit.title}
         </div>
       </div>
       <Gap y={104} />
-      <div className="flex justify-between">
+      <div className="flex flex-col 1100:flex-row 1100:justify-between gap-y-8 1100:gap-y-0 1100:gap-x-8 1280:gap-x-10">
         {translations.product_suit.suits.map((suit, i) => (
           <Suit key={i} name={suit.name} data={suit.data} />
         ))}

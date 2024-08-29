@@ -7,6 +7,7 @@ export const Illustration = () => {
       width={601}
       height={515}
       alt="illustration"
+      className="hidden 1100:block"
     />
   );
 };

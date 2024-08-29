@@ -21,19 +21,15 @@ export default async function Home({
   return (
     <>
       <Navigation translations={translations} />
-      <Gap y={70} />
-      <main className="max-w-8xl mx-auto">
-        <div className="px-[100px]">
+      <main className="max-w-8xl mx-auto mt-10 1100:mt-[70px]">
+        <div className="px-8 xl:px-[100px]">
           <Header translations={translations} />
           <Gap y={70} />
           <Ecos translations={translations} />
           <Gap y={40} />
           <ProductSuit translations={translations} />
-          <Gap y={104} />
           <SmartTrading translations={translations} />
-          <Gap y={104} />
           <UseCase translations={translations} />
-          <Gap y={124} />
           <Investor />
           <Gap y={64} />
           <Exchanges />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Gap } from "./gap";
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import { Translations } from "@/locales/en-US";
 
 const list = [
@@ -48,7 +48,7 @@ const list = [
   },
 ];
 
-type BrandType = (typeof list)[number];
+type BrandType = (typeof list)[number] & { styles?: CSSProperties };
 
 const Item: FC<{
   isLast: boolean;
@@ -57,10 +57,10 @@ const Item: FC<{
   const [title, subtitle] = data.split("|");
   return (
     <>
-      <div className="relative h-[204px] flex-1">
-        <div className="w-fit mx-auto">
-          <div className="text-[48px] font-medium">{title}</div>
-          <div className="flex items-center text-[#02E8F4] text-[28px] mt-5">
+      <div className="relative 1100:h-[204px] 1100:flex-1">
+        <div className="w-fit 1100:mx-auto">
+          <div className="text-2xl 1100:text-[48px] font-medium">{title}</div>
+          <div className="flex items-center text-[#02E8F4] 1100:text-[28px] mt-3 1100:mt-5">
             {subtitle}
             <Gap x={12} />
             <svg
@@ -79,15 +79,15 @@ const Item: FC<{
         </div>
       </div>
       {!isLast && (
-        <div className="w-[1px] h-[186px] mt-[9px] bg-white mx-[32px]"></div>
+        <div className="h-[1px] w-[200px] my-6 1100:my-0 1100:w-[1px] 1100:h-[186px] 1100:mt-[9px] bg-white 1100:mx-[32px]"></div>
       )}
     </>
   );
 };
 
 const Info = ({ translations }: { translations: Translations }) => (
-  <div className="bg-[#141418] rounded-3xl py-[70px] px-[60px] mx-[-34px]">
-    <div className="flex">
+  <div className="bg-[#141418] rounded-3xl py-[70px] px-[27px] 1100:px-[60px] xl:mx-[-34px]">
+    <div className="flex flex-col 1100:flex-row">
       {translations.metrics.map((data, i, list) => (
         <Item isLast={i === list.length - 1} key={i} data={data} />
       ))}
@@ -100,11 +100,12 @@ export const Brands = ({ list }: { list: BrandType[] }) => (
     {list.map((item, index) => (
       <a key={index} href={item.url} target="_blank">
         <Image
-          className="max-h-[52px]"
+          className="max-h-[52px] w-fit"
           src={item.src}
           width={item.width}
           height={item.height}
           alt={item.alt}
+          style={item.styles}
         />
       </a>
     ))}

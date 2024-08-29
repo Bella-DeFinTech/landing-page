@@ -16,7 +16,11 @@ const config: Config = {
       },
       screens: {
         "1440": "1440px",
+        "1380": "1380px",
         "1240": "1240px",
+        "1200": "1200px",
+        "1100": "1100px",
+        "840": "840px",
       },
       maxWidth: {
         "8xl": "90rem",
@@ -26,14 +30,25 @@ const config: Config = {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
+        ".fadeIn": {
+          animation: "fadeIn 0.35s cubic-bezier(0.33, 1, 0.68, 1) both",
+          "@keyframes fadeIn": {
+            "0%": {
+              opacity: "0",
+            },
+            "100%": {
+              opacity: "1",
+            },
+          },
+        },
         ".drop-shadow-x": {
           filter:
             "drop-shadow(0 5px 1px rgb(25 26 35 / 1)) drop-shadow(0 5px 2px rgb(25 26 35 / 0.5))",
         },
         ".lang-switch-on": {
-          animation: "fadeIn 0.35s cubic-bezier(0.33, 1, 0.68, 1) both",
+          animation: "switchFadeIn 0.35s cubic-bezier(0.33, 1, 0.68, 1) both",
           transformOrigin: "50% 0",
-          "@keyframes fadeIn": {
+          "@keyframes switchFadeIn": {
             "0%": {
               opacity: "0",
               transform: "scaleY(.3)",
@@ -45,9 +60,9 @@ const config: Config = {
           },
         },
         ".lang-switch-off": {
-          animation: "fadeOut 0.35s cubic-bezier(0.33, 1, 0.68, 1) both",
+          animation: "switchFadeOut 0.35s cubic-bezier(0.33, 1, 0.68, 1) both",
           transformOrigin: "50% 0",
-          "@keyframes fadeOut": {
+          "@keyframes switchFadeOut": {
             "0%": {
               opacity: "1",
               transform: "scaleY(1)",

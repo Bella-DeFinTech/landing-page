@@ -10,9 +10,45 @@ html,
 body {
   background-color: var(--bg);
   font-family: "Space Grotesk Variable", sans-serif;
+  font-size: 16px;
   color: #ffffff;
 }
 
 img {
   height: fit-content;
+}
+
+a {
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+summary {
+  list-style: none; /* 隐藏默认的marker */
+  appearance: none; /* 移除默认样式，包括marker */
+  -webkit-appearance: none; /* Safari和部分移动浏览器 */
+  cursor: pointer; /* 添加一个指针光标 */
+  position: relative; /* 使::before定位相对于summary */
+  padding-left: 30px; /* 为加号留出空间 */
+}
+
+summary::marker {
+  content: ""; /* 隐藏默认marker */
+}
+
+summary::before {
+  content: "+"; /* 添加加号符号 */
+  position: absolute; /* 绝对定位 */
+  left: 0; /* 确保加号出现在左侧 */
+  top: 0;
+  font-size: 36px; /* 可以根据需要调整大小 */
+  line-height: 1; /* 控制行高 */
+  font-weight: 200;
+}
+
+details[open] summary::before {
+  content: "-"; /* 当展开时，显示减号 */
 }

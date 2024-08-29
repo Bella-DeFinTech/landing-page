@@ -37,6 +37,7 @@ export const LangSwitch = () => {
           setShowMenu(true);
           setHideMenu(false);
         }}
+        className="h-10 1100:h-auto"
       >
         {langs.find((la) => la.code === lang)?.name}
         <Gap x={14} />

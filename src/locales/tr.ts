@@ -7,11 +7,12 @@ const TR = {
     "3.2%-3.5%|Sharpe Oranı (Üzerine gelindiğinde görünür)",
   ],
   product_suit: {
+    name: "Ürün Paketi",
     title:
       "Bella, önde gelen yapay zeka algoritmaları kullanarak DeFi getirinizi artırır ve kripto yatırımlarınız için sadeleştirilmiş ve optimize edilmiş çözümler sunar.",
     suits: [
       {
-        name: "AI Empowered",
+        name: "AI Güçlendirilmiş",
         data: [
           {
             name: "Bella Signal Bot",
@@ -26,7 +27,7 @@ const TR = {
         ],
       },
       {
-        name: "Asset Management",
+        name: "Varlık Yönetimi",
         data: [
           {
             name: "Flex Savings",
@@ -41,7 +42,7 @@ const TR = {
         ],
       },
       {
-        name: "Optimize Solutions",
+        name: "Optimize Çözümleri",
         data: [
           {
             name: "Tuner",
@@ -57,6 +58,7 @@ const TR = {
       },
     ],
   },
+  smart_trading: "Akıllı Ticaret",
   defi_yields: [
     {
       title: "En Uygun / Optimal",

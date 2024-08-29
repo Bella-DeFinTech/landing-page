@@ -1,9 +1,9 @@
 .title {
-  @apply rounded-md text-[30px] font-medium w-fit px-[7px];
+  @apply rounded-md text-2xl 1100:text-[30px] font-medium w-fit px-[7px];
 }
 
 .card {
-  @apply p-[50px] w-[600px] rounded-3xl;
+  @apply p-8 1380:p-[50px] rounded-3xl;
 }
 
 .card:nth-child(1),

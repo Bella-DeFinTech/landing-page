@@ -2,49 +2,19 @@ import { FC } from "react";
 import { Title } from "./title";
 import { Translations } from "@/locales/en-US";
 
-const agents = [
-  {
-    title: "Autonomous",
-    description:
-      "Leverages the most advanced AI strategies to track real-time trading signals",
-  },
-  {
-    title: "Lightweight",
-    description:
-      "Leverages the most advanced AI strategies to track real-time trading signals",
-  },
-  {
-    title: "Efficient",
-    description:
-      "Leverages the most advanced AI strategies to track real-time trading signals",
-  },
-];
-
-const yields = [
-  {
-    title: "Optimal",
-    description: "Iterate and fine-tune strategies for maximum returns",
-  },
-  {
-    title: "Precise",
-    description:
-      "Ensures Accuracy from fund routing to high-fidelity backtesting",
-  },
-  {
-    title: "Secure",
-    description:
-      "Ensures Accuracy from fund routing to high-fidelity backtesting",
-  },
-];
-
-const List: FC<{ title: string; data: typeof yields }> = ({ data, title }) => (
+const List: FC<{
+  title: string;
+  data: { title: string; description: string }[];
+}> = ({ data, title }) => (
   <div>
-    <div className="text-3xl">{title}</div>
-    <div className="mt-[26px] flex justify-between">
+    <div className="text-2xl text-[#02E8F4] 1100:text-3xl">{title}</div>
+    <div className="mt-[26px] flex flex-col gap-y-20 1100:gap-y-0 1100:flex-row 1100:justify-between">
       {data.map((item, i) => (
         <div key={i}>
-          <div className="text-3xl font-medium">{item.title}</div>
-          <div className="mt-3 text-lg w-[300px]">{item.description}</div>
+          <div className="text-2xl 1100:text-3xl font-medium">{item.title}</div>
+          <div className="mt-3 text-sm 1100:text-lg 1100:w-[300px]">
+            {item.description}
+          </div>
         </div>
       ))}
     </div>
@@ -57,12 +27,12 @@ export const SmartTrading = ({
   translations: Translations;
 }) => {
   return (
-    <div className="py-[85px] px-[60px] bg-[#141418] rounded-3xl flex flex-col gap-y-8">
+    <div className="py-[58px] mt-[80px] 1100:mt-[104px] 1100:py-[85px] px-10 1100:px-[60px] bg-[#141418] rounded-3xl flex flex-col gap-y-8">
       <List title="AI Agent" data={translations.ai_agents} />
       <div className="h-[70px] text-3xl font-medium">+</div>
       <List title="DeFI Yield" data={translations.defi_yields} />
       <div className="h-[70px] text-3xl font-medium">=</div>
-      <Title>Vision</Title>
+      <Title>{translations.smart_trading}</Title>
     </div>
   );
 };

@@ -3,11 +3,12 @@ const zhCN = {
   subTitle: "最大化您的交易和流动性挖矿收益",
   metrics: ["100,000+|用户数量", "236%|收益率", "3.2%-3.5%|夏普比率"],
   product_suit: {
+    name: "产品系列",
     title:
       "Bella使用领先的AI算法提高您的DeFi回报，并为您的加密投资提供简洁优化的解决方案",
     suits: [
       {
-        name: "人工智能工具",
+        name: "AI驱动",
         data: [
           {
             name: "Bella Signal Bot",
@@ -35,7 +36,7 @@ const zhCN = {
         ],
       },
       {
-        name: "Optimize Solutions",
+        name: "优化解决方案",
         data: [
           {
             name: "Tuner",
@@ -51,6 +52,7 @@ const zhCN = {
       },
     ],
   },
+  smart_trading: "智能交易",
   defi_yields: [
     {
       title: "最优解",

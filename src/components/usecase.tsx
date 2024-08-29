@@ -52,12 +52,12 @@ const cards = [
 
 export const UseCase = ({ translations }: { translations: Translations }) => {
   return (
-    <div>
+    <div className="mt-[80px] 1100:mt-[104px]">
       <div className="flex justify-between">
         <Title>{translations.usecase.title}</Title>
       </div>
       <Gap y={40} />
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 1100:grid-cols-2 gap-5 1380:gap-10">
         {cards
           .map((c, i) => ({
             ...c,
@@ -66,8 +66,15 @@ export const UseCase = ({ translations }: { translations: Translations }) => {
           }))
           .map((c, i) => {
             return (
-              <div key={i} className={clsx(cardStyles.card, "drop-shadow-x")}>
-                <div className="flex h-full gap-x-1">
+              // <div key={i} className="flex-1">
+              <div
+                className={clsx(
+                  cardStyles.card,
+                  "drop-shadow-x w-full h-full flex-1"
+                )}
+                key={i}
+              >
+                <div className="flex flex-col 1100:flex-row h-full gap-x-1">
                   <div>
                     <div>
                       {c.title.split("\n").map((t, i) => (
@@ -77,7 +84,7 @@ export const UseCase = ({ translations }: { translations: Translations }) => {
                       ))}
                     </div>
                     <div
-                      className={clsx("mt-10")}
+                      className={clsx("mt-10 text-sm 1100:text-base")}
                       dangerouslySetInnerHTML={{
                         __html: c.description.replaceAll("\n", "<br/>"),
                       }}
@@ -88,10 +95,11 @@ export const UseCase = ({ translations }: { translations: Translations }) => {
                     width={c.img.width}
                     height={c.img.height}
                     alt=""
-                    className="flex-none w-[206px] self-center"
+                    className="flex-none w-[100px] mt-8 1100:mt-0 1100:w-[160px] 1380:w-[190px] 1100:self-center"
                   />
                 </div>
               </div>
+              // </div>
             );
           })}
       </div>

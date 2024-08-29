@@ -7,6 +7,7 @@ const translations = {
     "3.2%-3.5%|Sharpe Ratio",
   ],
   product_suit: {
+    name: "PRODUCT SUITE",
     title:
       "Bella enhances your DeFi returns using leading AI algorithms and provides streamlined and optimized solutions for your crypto investment",
     suits: [
@@ -57,6 +58,7 @@ const translations = {
       },
     ],
   },
+  smart_trading: "Smart Trading",
   defi_yields: [
     {
       title: "Optimal",
@@ -94,7 +96,7 @@ const translations = {
     title: "Democratizing Crypto Trading",
     cases: [
       [
-        "AI-Powered Trading",
+        "AI-Powered\nTrading",
         `Our Trading Signal Bot delivers precise signals for selected token pairs, and the LLM Research Bot offers detailed market insights and indicators.
 
 Together, they grant you an innovative, AI-driven approach so you can rise ahead of the pack.
@@ -108,22 +110,22 @@ By analyzing market conditions and considering your personal financial goals, ou
 `,
       ],
       [
-        "Market Analysis and Prediction",
+        "Market Analysis and\nPrediction",
         `Bella processes extensive market data, news, and on-chain metrics in real-time to deliver actionable insights and trading signals.
 
 We employ advanced LLM to predict both short-term and long-term market trends to empower your investment decisions.
 `,
       ],
       [
-        "Risk Management",
+        "Risk\nManagement",
         `Our models detect potential market risks and can suggest optimal hedging strategies to protect your assets. Bella’s AI Agent conducts market and portfolio analysis to recommend asset diversification strategies`,
       ],
       [
-        "Cross-Chain Optimization",
+        "Cross-Chain\nOptimization",
         `Bella scans opportunities across multiple blockchain networks to identify the most profitable yield farming and liquidity provision opportunities. Enjoy comprehensive insights and cross-chain arbitrage opportunities across all networks.`,
       ],
       [
-        "Meme Ambassador",
+        "Meme\nAmbassador",
         `Supercharge your community with our AI-Powered Meme Ambassador, ushering in the fun and engaging world of memes. Transform market trends and data into viral, community-driven content.`,
       ],
       [
