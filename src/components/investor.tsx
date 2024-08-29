@@ -64,7 +64,7 @@ export const Investor = () => {
         <Title>Investors</Title>
       </div>
       <div className="my-10">
-        <Brands list={list} />
+        <Brands list={list} minRow={3} />
       </div>
     </div>
   );

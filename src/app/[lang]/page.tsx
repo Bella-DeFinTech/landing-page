@@ -22,7 +22,7 @@ export default async function Home({
     <>
       <Navigation translations={translations} />
       <main className="max-w-8xl mx-auto mt-10 1100:mt-[70px]">
-        <div className="px-8 xl:px-[100px]">
+        <div className="px-5 840:px-8 xl:px-[100px]">
           <Header translations={translations} />
           <Gap y={70} />
           <Ecos translations={translations} />

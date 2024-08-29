@@ -89,7 +89,7 @@ export const Exchanges = () => (
       <Title>Exchanges</Title>
     </div>
     <div className="my-10">
-      <Brands list={list} />
+      <Brands minRow={3} list={list} />
     </div>
   </div>
 );

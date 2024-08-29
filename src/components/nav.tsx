@@ -18,7 +18,7 @@ export const Navigation = ({
   return (
     <nav className="pt-0 840:pt-10 sticky top-0 840:top-[-20px] bg-[rgba(0,0,0,.6)] z-10 backdrop-blur-sm text-sm 1100:text-base">
       <div className="max-w-8xl mx-auto ">
-        <div className="px-8 xl:px-[100px] flex items-center h-[68px]">
+        <div className="px-5 840:px-8 xl:px-[100px] flex items-center h-[68px]">
           <div className="flex items-center text-white font-medium text-2xl 1100:text-[40px]">
             <Image
               className="mr-4 w-[30px] h-[30px] 1100:w-[42px] 1100:h-[42px]"

@@ -73,7 +73,7 @@ export const Subscribe = () => {
     }
   }, []);
   return (
-    <div className="bg-[#292A32] py-[32.5px] px-10 flex flex-col 1100:flex-row gap-x-5 h-fit rounded-lg">
+    <div className="bg-[#292A32] py-[32.5px] px-5 sm:px-10 flex flex-col 1100:flex-row gap-x-5 h-fit rounded-lg">
       <input
         disabled={subscribing || subscribed}
         className="outline-0 border-white border h-[52px] 1100:h-auto bg-transparent px-2 rounded-lg"

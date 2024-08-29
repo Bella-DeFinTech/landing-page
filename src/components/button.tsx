@@ -23,7 +23,7 @@ export const Button = forwardRef<
   <button
     ref={ref}
     className={clsx(
-      "rounded-lg py-[21px] px-[43px] inline-flex items-center w-fit",
+      "rounded-lg py-[21px] px-5 sm:px-[43px] inline-flex items-center w-fit",
       {
         "border border-white": outline,
         "text-black": fill,

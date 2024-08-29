@@ -6,7 +6,7 @@ export const Header = ({ translations }: { translations: Translations }) => {
     <header>
       <div className="flex justify-between">
         <div className="1100:w-[531px] flex flex-col gap-y-6 840:gap-y-[35px]">
-          <p className="font-medium text-[32px] leading-normal 1100:text-[60px] 1100:leading-[76px]">
+          <p className="font-medium text-[32px] leading-tight sm:leading-normal 1100:text-[60px] 1100:leading-[76px]">
             {translations.title}
           </p>
           <p className="1100:text-[20px] text-sm 1100:leading-[28px]">

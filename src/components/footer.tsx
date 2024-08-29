@@ -4,7 +4,7 @@ import { Subscribe } from "./subscribe";
 
 const links = [
   [
-    ["Recources"],
+    ["Resources"],
     ["Ai Bot Docs", ""],
     ["Flex Savings Docs", "https://bellafi.gitbook.io/bella-protocol/"],
     [
@@ -39,7 +39,7 @@ const medias = [
 ];
 
 export const Footer = () => (
-  <footer className="bg-[#191A23] rounded-t-xl 1100:rounded-3xl p-8 1280:p-[60px] my-8 mx-[-32px] 1100:mx-0">
+  <footer className="bg-[#191A23] rounded-t-xl 1100:rounded-3xl p-8 1280:p-[60px] my-8 mx-[-20px] 840:mx-[-32px] 1100:mx-0">
     <div className="1100:pr-[95px] border-b border-white">
       <div className="flex flex-col 1100:flex-row 1100:items-center">
         <div className="flex items-center text-white font-medium text-2xl 1100:text-[40px]">

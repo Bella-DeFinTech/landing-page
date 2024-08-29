@@ -77,7 +77,7 @@ export const Menu = () => {
       {open &&
         createPortal(
           <>
-            <div className="fixed overflow-y-auto fadeIn top-0 left-0 right-0 bottom-0 bg-black/80 z-20 text-3xl pt-[68px]">
+            <div className="fixed overflow-y-auto fadeIn top-0 left-0 right-0 bottom-0 bg-black/90 z-20 text-xl pt-[68px]">
               <div className="h-full w-full pt-[100px]">
                 <div
                   ref={root}
@@ -102,7 +102,7 @@ export const Menu = () => {
                           });
                         }}
                       >
-                        <summary className="list-none text-5xl w-[384px]">
+                        <summary className="list-none text-3xl w-[270px]">
                           {title.toUpperCase()}
                         </summary>
                         <ul className="mt-5 flex flex-col gap-y-4 pl-[30px]">
