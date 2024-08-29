@@ -118,7 +118,7 @@ export const Brands = ({
         key={index}
         href={item.url}
         className="w-fit lg:w-auto"
-        target="_blank"
+        target="__blank"
       >
         <Image
           className="840:max-h-[52px] w-fit"
