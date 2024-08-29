@@ -7,7 +7,7 @@ import { createPortal } from "react-dom";
 const resources = [
   ["Products", products],
   ["Developers", developers],
-  ["Documentation", docs],
+  ["Docs", docs],
 ] as const;
 
 export const Menu = () => {
@@ -102,7 +102,7 @@ export const Menu = () => {
                           });
                         }}
                       >
-                        <summary className="list-none text-3xl w-[270px]">
+                        <summary className="list-none text-3xl w-[212px]">
                           {title.toUpperCase()}
                         </summary>
                         <ul className="mt-5 flex flex-col gap-y-4 pl-[30px]">

@@ -35,6 +35,10 @@ summary {
   padding-left: 30px; /* 为加号留出空间 */
 }
 
+summary::-webkit-details-marker {
+  display: none; /* 隐藏 WebKit 浏览器中的默认 marker */
+}
+
 summary::marker {
   content: ""; /* 隐藏默认marker */
 }
