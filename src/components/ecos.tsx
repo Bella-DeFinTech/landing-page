@@ -96,11 +96,16 @@ const Info = ({ translations }: { translations: Translations }) => (
 );
 
 export const Brands = ({ list }: { list: BrandType[] }) => (
-  <div className="flex h-[52px] items-center gap-x-9">
+  <div className="grid w-fit lg:w-auto grid-rows-2 gap-y-5 gap-x-5 840:gap-y-0 840:grid-rows-1 grid-flow-col 840:h-[52px] 840:gap-x-9">
     {list.map((item, index) => (
-      <a key={index} href={item.url} target="_blank">
+      <a
+        key={index}
+        href={item.url}
+        className="w-fit lg:w-auto"
+        target="_blank"
+      >
         <Image
-          className="max-h-[52px] w-fit"
+          className="840:max-h-[52px] w-fit"
           src={item.src}
           width={item.width}
           height={item.height}

@@ -14,7 +14,7 @@ const list = [
       border: "5px solid white",
       maxHeight: 100,
       padding: "26px 7px",
-      width: 218,
+      width: 261,
       height: 90,
     },
   },
