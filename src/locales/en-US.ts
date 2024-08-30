@@ -2,9 +2,9 @@ const translations = {
   title: "Unleash the Power of AI in Crypto Trading",
   subTitle: "Maximize Your Trading and Yield Farming Returns",
   metrics: [
-    "100,000 +|total number of users",
-    "236%|returns",
-    "3.2%-3.5%|Sharpe Ratio",
+    "100,000 +|Total Number of Users",
+    "236%|Returns|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition",
+    "3.2%-3.5%|Sharpe Ratio|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition.",
   ],
   product_suit: {
     name: "PRODUCT SUITE",

@@ -52,31 +52,49 @@ const list = [
 type BrandType = (typeof list)[number] & { styles?: CSSProperties };
 
 const Item: FC<{
+  isFirst: boolean;
   isLast: boolean;
   data: string;
-}> = ({ data, isLast }) => {
-  const [title, subtitle] = data.split("|");
+}> = ({ data, isLast, isFirst }) => {
+  const [title, subtitle, hovering] = data.split("|");
   return (
     <>
       <div className="relative 1100:h-[204px] 1100:flex-1">
         <div className="w-fit 1100:mx-auto">
           <div className="text-2xl 1100:text-[48px] font-medium">{title}</div>
-          <div className="flex items-center text-[#02E8F4] 1100:text-[28px] mt-3 1100:mt-5">
+          <div
+            className={clsx(
+              "flex group relative items-center text-[#02E8F4] 1100:text-[28px] mt-3 1100:mt-5",
+              {
+                "cursor-pointer": !isFirst,
+              }
+            )}
+          >
             {subtitle}
             <Gap x={12} />
-            <svg
-              width="21"
-              height="20"
-              viewBox="0 0 21 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="840:w-5 w-3"
-            >
-              <path
-                d="M0.929504 13.701C0.212065 14.1152 -0.0337473 15.0326 0.380466 15.75C0.79468 16.4674 1.71207 16.7133 2.4295 16.299L0.929504 13.701ZM20.4489 5.38823C20.6633 4.58803 20.1884 3.76552 19.3882 3.55111L6.34824 0.0570541C5.54804 -0.157359 4.72554 0.317515 4.51112 1.11771C4.29671 1.91791 4.77159 2.74042 5.57179 2.95483L17.1629 6.06066L14.0571 17.6518C13.8427 18.452 14.3175 19.2745 15.1177 19.4889C15.9179 19.7033 16.7404 19.2284 16.9548 18.4282L20.4489 5.38823ZM2.4295 16.299L19.75 6.29904L18.25 3.70096L0.929504 13.701L2.4295 16.299Z"
-                fill="#02E8F4"
-              />
-            </svg>
+            {!isFirst && (
+              <svg
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="840:w-4 1100:w-5 w-3 group-hover:rotate-[30deg] transition-transform duration-200"
+              >
+                <path
+                  d="M0.929504 13.701C0.212065 14.1152 -0.0337473 15.0326 0.380466 15.75C0.79468 16.4674 1.71207 16.7133 2.4295 16.299L0.929504 13.701ZM20.4489 5.38823C20.6633 4.58803 20.1884 3.76552 19.3882 3.55111L6.34824 0.0570541C5.54804 -0.157359 4.72554 0.317515 4.51112 1.11771C4.29671 1.91791 4.77159 2.74042 5.57179 2.95483L17.1629 6.06066L14.0571 17.6518C13.8427 18.452 14.3175 19.2745 15.1177 19.4889C15.9179 19.7033 16.7404 19.2284 16.9548 18.4282L20.4489 5.38823ZM2.4295 16.299L19.75 6.29904L18.25 3.70096L0.929504 13.701L2.4295 16.299Z"
+                  fill="#02E8F4"
+                />
+              </svg>
+            )}
+            {!isFirst && (
+              <div
+                style={{ transformOrigin: "50% 0" }}
+                className="text-sm z-10 1100:text-base group-hover:visible  duration-200 group-hover:scale-y-100 invisible pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto scale-y-[0.3] absolute top-full w-[calc(100vw-94px)] sm:w-[390px] left-0 1100:left-1/2 1100:-translate-x-1/2 bg-white text-black rounded p-4"
+              >
+                {hovering}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -91,7 +109,12 @@ const Info = ({ translations }: { translations: Translations }) => (
   <div className="bg-[#141418] rounded-xl 840:rounded-3xl py-10 840:py-[70px] px-[27px] 1100:px-[60px] xl:mx-[-34px]">
     <div className="flex flex-col 1100:flex-row">
       {translations.metrics.map((data, i, list) => (
-        <Item isLast={i === list.length - 1} key={i} data={data} />
+        <Item
+          isFirst={i === 0}
+          isLast={i === list.length - 1}
+          key={i}
+          data={data}
+        />
       ))}
     </div>
   </div>

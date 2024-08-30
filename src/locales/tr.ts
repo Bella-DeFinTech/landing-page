@@ -3,8 +3,8 @@ const TR = {
   subTitle: "Ticaret ve Yield Farming Getirilerinizi En Üst Düzeye Çıkarın",
   metrics: [
     "100.000’den|fazla toplam kullanıcı sayısı",
-    "236%|getiri (Üzerine gelince görünür)",
-    "3.2%-3.5%|Sharpe Oranı (Üzerine gelindiğinde görünür)",
+    "236%|getiri (Üzerine gelince görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
+    "3.2%-3.5%|Sharpe Oranı (Üzerine gelindiğinde görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
   ],
   product_suit: {
     name: "Ürün Paketi",

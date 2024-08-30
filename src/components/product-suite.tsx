@@ -1,11 +1,16 @@
 import { FC } from "react";
-import { Gap } from "./gap";
 import { Title } from "./title";
 import { Translations } from "@/locales/en-US";
+import clsx from "clsx";
 
 const Suit: FC<{
   name: string;
-  data: { name: string; description: string }[];
+  data: {
+    name: string;
+    description: string;
+    url: string;
+    disabled?: boolean;
+  }[];
 }> = ({ name, data }) => {
   return (
     <div className="flex-1">
@@ -14,11 +19,20 @@ const Suit: FC<{
       </div>
       <div className="flex flex-col gap-y-8">
         {data.map((item, i) => (
-          <div
+          <a
+            href={item.url}
+            target="__blank"
             key={i}
-            className="bg-[#141418] rounded-xl 840:rounded-3xl p-8 1100:p-6 1100:min-h-[300px] 1380:px-9 1380:py-10 1380:min-h-[330px] drop-shadow-x border-[#191A23] border"
+            className={clsx(
+              "bg-[#141418] rounded-xl 840:rounded-3xl p-8 1100:p-6 1100:min-h-[300px] 1380:px-9 1380:py-10 1380:min-h-[330px] drop-shadow-x border-[#191A23] border",
+              {
+                "hover:bg-white hover:opacity-100 hover:text-black group":
+                  !item.disabled,
+                "pointer-events-none": item.disabled,
+              }
+            )}
           >
-            <div className="font-medium text-xl 1100:text-[26px] flex items-center gap-x-4 border-b border-white pb-4 mb-7">
+            <div className="font-medium text-xl 1100:text-[26px] flex group-hover:border-black items-center gap-x-4 border-b border-white pb-4 mb-7">
               <svg
                 width="33"
                 height="32"
@@ -30,12 +44,18 @@ const Suit: FC<{
                 <path
                   d="M16.4988 4.91972L32.1442 0.310303L27.5791 16.0001L32.1442 31.6455L16.4988 27.0804L0.809021 31.6455L5.41844 16.0001L0.809021 0.310303L16.4988 4.91972Z"
                   fill="white"
+                  className="group-hover:fill-[rgb(2,232,244)]"
                 />
               </svg>
               {item.name}
             </div>
             <div className="text-sm 1100:text-xl">{item.description}</div>
-          </div>
+            {item.disabled && (
+              <div className="bg-[#02E8F4] w-fit flex mt-6 items-center px-[7px] text-black flex-none font-medium text-sm 1100:text-lg rounded">
+                coming soon
+              </div>
+            )}
+          </a>
         ))}
       </div>
     </div>
@@ -57,7 +77,19 @@ export const ProductSuit = ({
       </div>
       <div className="mt-[80px] 1100:mt-[104px] flex flex-col 1100:flex-row 1100:justify-between gap-y-8 1100:gap-y-0 1100:gap-x-8 1280:gap-x-10">
         {translations.product_suit.suits.map((suit, i) => (
-          <Suit key={i} name={suit.name} data={suit.data} />
+          <Suit
+            key={i}
+            name={suit.name}
+            data={suit.data.map((s, j) => ({
+              ...s,
+              url: [
+                ["https://t.me/BellaSignalTestnetBot", ""],
+                ["https://fs.bella.fi/", "http://lpfarm.bella.fi/"],
+                ["https://docs.bella.fi/getting-started/readme", ""],
+              ][i][j],
+              disabled: (i === 0 && j === 1) || (i === 2 && j === 1),
+            }))}
+          />
         ))}
       </div>
     </div>
