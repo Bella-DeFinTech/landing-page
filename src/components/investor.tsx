@@ -20,9 +20,9 @@ const list = [
     alt: "Arrington XRP Capital",
     styles: {
       width: 180,
-      backgroundColor: "#fff",
-      border: "5px solid white",
-      borderRadius: "4px",
+      // backgroundColor: "#fff",
+      // border: "5px solid white",
+      // borderRadius: "4px",
     },
   },
   {
@@ -33,9 +33,9 @@ const list = [
     alt: "Alphabit",
     styles: {
       width: 240,
-      backgroundColor: "#fff",
-      border: "5px solid white",
-      borderRadius: "4px",
+      // backgroundColor: "#fff",
+      // border: "5px solid white",
+      // borderRadius: "4px",
     },
   },
   {

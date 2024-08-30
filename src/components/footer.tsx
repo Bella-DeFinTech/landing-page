@@ -42,16 +42,13 @@ export const Footer = () => (
   <footer className="bg-[#191A23] rounded-t-xl 1100:rounded-3xl p-8 1280:p-[60px] my-8 mx-[-20px] 840:mx-[-32px] 1100:mx-0">
     <div className="1100:pr-[95px] border-b border-white">
       <div className="flex flex-col 1100:flex-row 1100:items-center">
-        <div className="flex items-center text-white font-medium text-2xl 1100:text-[40px]">
-          <Image
-            className="mr-4 w-[30px] h-[30px] 1100:w-[42px] 1100:h-[42px]"
-            src="/assets/logo.png"
-            width={42}
-            height={42}
-            alt="logo"
-          />
-          Bella
-        </div>
+        <Image
+          className="h-[30px] w-fit 1100:h-[42px]"
+          src="/assets/bella.png"
+          width={500}
+          height={155}
+          alt="logo"
+        />
         <div className="font-bold 1100:text-xl mt-6 1100:mt-0 1100:ml-6">
           AI Agent for Crypto Trading and Yield Farming
         </div>
