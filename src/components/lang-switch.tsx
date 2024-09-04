@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "./button";
-import { Gap } from "./gap";
+// import { Button } from "./button";
+// import { Gap } from "./gap";
 import clsx from "clsx";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -31,35 +31,23 @@ export const LangSwitch = () => {
   }, [showMenu]);
   return (
     <div className="relative">
-      <Button
-        outline
+      <button
         onClick={() => {
           setShowMenu(true);
           setHideMenu(false);
         }}
-        className="h-10 1100:h-auto"
+        className="py-4"
       >
-        {langs.find((la) => la.code === lang)?.name}
-        <Gap x={14} />
-        <svg
-          width="10"
-          height="6"
-          viewBox="0 0 10 6"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={clsx("duration-300 transition-transform", {
-            "rotate-180": showMenu,
-          })}
-        >
-          <path
-            d="M4.99998 3.87831L8.71233 0.166016L9.77298 1.22667L4.99998 5.99968L0.227051 1.22667L1.28771 0.166016L4.99998 3.87831Z"
-            fill="white"
-          />
-        </svg>
-      </Button>
+        <div className="border rounded-full border-white flex-shrink-0 flex-grow-0 w-8 h-8 flex items-center justify-center">
+          {langs
+            .find((la) => la.code === lang)
+            ?.code.split("-")[0]
+            .toUpperCase()}
+        </div>
+      </button>
       <div
         className={clsx(
-          "absolute bg-white text-black rounded-lg w-[220px] top-full right-0 px-2 py-2",
+          "absolute bg-[rgba(39,39,39,1)] text-white rounded-lg w-[170px] top-full left-1/2 -translate-x-1/2 px-2 py-2",
           {
             "lang-switch-on block": showMenu && !hideMenu,
             "lang-switch-off block": !showMenu && !hideMenu,

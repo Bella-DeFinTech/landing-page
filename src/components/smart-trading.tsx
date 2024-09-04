@@ -7,7 +7,7 @@ const List: FC<{
   data: { title: string; description: string }[];
 }> = ({ data, title }) => (
   <div>
-    <div className="text-2xl text-[#02E8F4] 1100:text-3xl">{title}</div>
+    <div className="text-2xl text-[var(--primary)] 1100:text-3xl">{title}</div>
     <div className="mt-[26px] flex flex-col gap-y-10 840:gap-y-20 1100:gap-y-0 1100:flex-row 1100:justify-between">
       {data.map((item, i) => (
         <div key={i}>

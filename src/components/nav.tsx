@@ -27,15 +27,15 @@ export const Navigation = ({
             alt="logo"
           />
           <Menu />
-          <ul className="hidden 840:flex ml-auto items-center gap-x-10">
+          <ul className="hidden 840:flex ml-auto items-center gap-x-5">
             {resources.map(([title, links], i) => (
               <li key={i} className="relative group">
-                <div className="group-hover:opacity-[.8] duration-200 transition-opacity cursor-pointer">
+                <div className="group-hover:opacity-[.82] px-5 py-4 duration-200 transition-opacity cursor-pointer">
                   {title}
                 </div>
                 <ul
                   style={{ transformOrigin: "50% 0" }}
-                  className="invisible delay-75 opacity-0 scale-y-[0.3] pointer-events-none w-[170px] absolute top-full right-0 group-hover:scale-y-100 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto bg-[rgba(39,39,39,1)] duration-300 transition-all py-2.5 shadow-lg rounded-md"
+                  className="invisible delay-75 opacity-0 scale-y-[0.3] pointer-events-none w-[170px] absolute top-full left-1/2 -translate-x-1/2 group-hover:scale-y-100 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto bg-[rgba(39,39,39,1)] duration-300 transition-all p-2.5 drop-shadow-lg rounded-md"
                 >
                   {links.map((link, j) => (
                     <li key={j}>
@@ -51,7 +51,7 @@ export const Navigation = ({
                 </ul>
               </li>
             ))}
-            <li>
+            <li className="ml-5">
               <LangSwitch />
             </li>
           </ul>

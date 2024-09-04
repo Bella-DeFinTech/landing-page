@@ -51,11 +51,11 @@ const config: Config = {
           "@keyframes switchFadeIn": {
             "0%": {
               opacity: "0",
-              transform: "scaleY(.3)",
+              transform: "scaleY(.3) translateX(-50%)",
             },
             "100%": {
               opacity: "1",
-              transform: "scaleY(1)",
+              transform: "scaleY(1) translateX(-50%)",
             },
           },
         },
@@ -65,11 +65,11 @@ const config: Config = {
           "@keyframes switchFadeOut": {
             "0%": {
               opacity: "1",
-              transform: "scaleY(1)",
+              transform: "scaleY(1) translateX(-50%)",
             },
             "100%": {
               opacity: "0",
-              transform: "scaleY(.3)",
+              transform: "scaleY(.3) translateX(-50%)",
             },
           },
         },

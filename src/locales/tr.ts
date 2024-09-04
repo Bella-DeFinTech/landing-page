@@ -3,8 +3,8 @@ const TR = {
   subTitle: "Ticaret ve Yield Farming Getirilerinizi En Üst Düzeye Çıkarın",
   metrics: [
     "100.000’den|fazla toplam kullanıcı sayısı",
-    "236%|getiri (Üzerine gelince görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
-    "3.2%-3.5%|Sharpe Oranı (Üzerine gelindiğinde görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
+    "200%|getiri (Üzerine gelince görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
+    "3.2|Sharpe Oranı (Üzerine gelindiğinde görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
   ],
   product_suit: {
     name: "Ürün Paketi",
@@ -99,24 +99,11 @@ const TR = {
     cases: [
       [
         "Yapay Zeka Destekli Ticaret",
-        `Alım-Satım Sinyali Botumuz seçilen token çiftleri için hassas sinyaller sunar, ve LLM (Large Language Model) Araştırma Botumuz detaylı piyasa içgörüleri ve göstergeler sağlar.
-
-Birlikte, yenilikçi bir yapay zeka destekli yaklaşım sunarak öne çıkmanıza yardımcı olurlar.
-`,
+        `Alım-Satım Sinyali Botumuz seçilen token çiftleri için ticaret sinyalleri sunar, ve LLM (Large Language Model) Araştırma Botumuz detaylı piyasa içgörüleri ve göstergeler sağlar. Birlikte, yenilikçi bir yapay zeka destekli yaklaşım sunarak öne çıkmanıza yardımcı olurlar.`,
       ],
       [
         "Portföy Araştırması",
-        `Bella, gelişmiş yapay zeka entegrasyonu ile tüm kripto portföyünüzün kapsamlı bir görünümünü sunar ve optimal yeniden dengeleme önerileri sağlar.
-
-Piyasa koşullarını analiz ederek ve kişisel finansal hedeflerinizi göz önünde bulundurarak, araçlarımız portföyünüzü maksimum büyüme ve istikrar için güçlendirir
-`,
-      ],
-      [
-        "Market Analizi ve Tahmini",
-        `Bella, eyleme dönüştürülebilir içgörüler ve işlem sinyalleri sunmak için kapsamlı piyasa verilerini, haberleri ve zincir üstü ölçümleri gerçek zamanlı olarak işler.
-
-Yatırım kararlarınızı güçlendirmek için hem kısa vadeli hem de uzun vadeli piyasa eğilimlerini tahmin etmek için gelişmiş LLM (Large Language Model)  kullanıyoruz.
-`,
+        `Gelişmiş yapay zeka entegrasyonu ile tüm kripto portföyünüzün kapsamlı bir görünümünü sunar. Piyasa koşullarını analiz ederek ve kişisel finansal hedeflerinizi göz önünde bulundurarak, araçlarımız portföyünüzü maksimum büyüme ve istikrar için güçlendirir.`,
       ],
       [
         "Risk Yönetimi",

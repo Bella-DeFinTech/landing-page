@@ -27,7 +27,7 @@ export const Button = forwardRef<
       {
         "border border-white": outline,
         "text-black": fill,
-        "bg-[#02E8F4]": accent,
+        "bg-[var(--primary)]": accent,
         "bg-white": fill && !accent,
       },
       className

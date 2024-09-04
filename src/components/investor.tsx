@@ -8,9 +8,6 @@ const list = [
     width: 492,
     height: 127,
     alt: "Binance",
-    styles: {
-      width: 201,
-    },
   },
   {
     src: "/assets/investors/1.svg",
@@ -18,12 +15,6 @@ const list = [
     width: 1380,
     height: 503,
     alt: "Arrington XRP Capital",
-    styles: {
-      width: 180,
-      // backgroundColor: "#fff",
-      // border: "5px solid white",
-      // borderRadius: "4px",
-    },
   },
   {
     src: "/assets/investors/2.svg",
@@ -31,12 +22,6 @@ const list = [
     width: 184,
     height: 38,
     alt: "Alphabit",
-    styles: {
-      width: 240,
-      // backgroundColor: "#fff",
-      // border: "5px solid white",
-      // borderRadius: "4px",
-    },
   },
   {
     src: "/assets/investors/3.png",
@@ -51,9 +36,6 @@ const list = [
     width: 196,
     height: 80,
     alt: "Ledger Capital",
-    styles: {
-      width: 128,
-    },
   },
 ];
 

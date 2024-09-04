@@ -34,9 +34,9 @@ export default async function Home({
           <Gap y={64} />
           <Exchanges />
           <Gap y={96} />
-          <Footer />
         </div>
       </main>
+      <Footer />
     </>
   );
 }

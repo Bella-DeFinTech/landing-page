@@ -14,7 +14,7 @@ export const Header = ({ translations }: { translations: Translations }) => {
           </p>
           <a
             href="http://lpfarm.bella.fi/"
-            className="bg-white text-black rounded-lg py-[21px] px-[43px] inline-flex items-center w-fit h-10 1100:h-auto"
+            className="bg-white text-black py-3 px-12 inline-flex rounded-full items-center w-fit h-10 1100:h-auto"
             target="__blank"
           >
             Start Now

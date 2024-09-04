@@ -1,6 +1,8 @@
 "use client";
 
 import { developers, docs, products } from "@/constant";
+import { langs } from "@/lang";
+import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -14,6 +16,9 @@ export const Menu = () => {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const toggle = useCallback(() => setOpen((prev) => !prev), []);
+  const params = useParams();
+  const router = useRouter();
+  const { lang } = params;
 
   useEffect(() => {
     if (open) {
@@ -26,52 +31,73 @@ export const Menu = () => {
   return (
     <>
       {createPortal(
-        <svg
-          onClick={toggle}
-          className="840:hidden ml-auto cursor-pointer fixed top-[22px] right-8 z-30"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <line
-            x1="3"
-            y1="6"
-            x2="21"
-            y2="6"
-            stroke="white"
-            strokeWidth="2"
-            className="transition-transform duration-200"
-            style={{
-              transform: open ? "rotate(45deg) translate(3px, 3px)" : "none",
-              transformOrigin: "center",
-            }}
-          />
-          <line
-            x1="3"
-            y1="12"
-            x2="21"
-            y2="12"
-            stroke="white"
-            strokeWidth="2"
-            className="transition-opacity duration-200"
-            style={{
-              opacity: open ? 0 : 1,
-            }}
-          />
-          <line
-            x1="3"
-            y1="18"
-            x2="21"
-            y2="18"
-            stroke="white"
-            strokeWidth="2"
-            className="transition-transform duration-200"
-            style={{
-              transform: open ? "rotate(-45deg) translate(3px, -3px)" : "none",
-              transformOrigin: "center",
-            }}
-          />
-        </svg>,
+        <>
+          {open && (
+            <button
+              onClick={() => {
+                const i = langs.findIndex((la) => la.code === lang);
+                const next = (i + 1) % langs.length;
+                router.push(`/${langs[next].code}`);
+              }}
+              className="fixed top-[22px] left-8 z-30"
+            >
+              <div className="border rounded-full border-white flex-shrink-0 flex-grow-0 w-8 h-8 flex items-center justify-center">
+                {langs
+                  .find((la) => la.code === lang)
+                  ?.code.split("-")[0]
+                  .toUpperCase()}
+              </div>
+            </button>
+          )}
+          <svg
+            onClick={toggle}
+            className="840:hidden ml-auto cursor-pointer fixed top-[22px] right-8 z-30"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <line
+              x1="3"
+              y1="6"
+              x2="21"
+              y2="6"
+              stroke="white"
+              strokeWidth="2"
+              className="transition-transform duration-200"
+              style={{
+                transform: open ? "rotate(45deg) translate(3px, 3px)" : "none",
+                transformOrigin: "center",
+              }}
+            />
+            <line
+              x1="3"
+              y1="12"
+              x2="21"
+              y2="12"
+              stroke="white"
+              strokeWidth="2"
+              className="transition-opacity duration-200"
+              style={{
+                opacity: open ? 0 : 1,
+              }}
+            />
+            <line
+              x1="3"
+              y1="18"
+              x2="21"
+              y2="18"
+              stroke="white"
+              strokeWidth="2"
+              className="transition-transform duration-200"
+              style={{
+                transform: open
+                  ? "rotate(-45deg) translate(3px, -3px)"
+                  : "none",
+                transformOrigin: "center",
+              }}
+            />
+          </svg>
+        </>,
         document.body
       )}
       {open &&

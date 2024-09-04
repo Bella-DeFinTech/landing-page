@@ -3,8 +3,8 @@ const translations = {
   subTitle: "Maximize Your Trading and Yield Farming Returns",
   metrics: [
     "100,000 +|Total Number of Users",
-    "236%|Returns|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition",
-    "3.2%-3.5%|Sharpe Ratio|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition.",
+    "200%|Returns|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition.",
+    "3.2|Sharpe Ratio|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition.",
   ],
   product_suit: {
     name: "PRODUCT SUITE",
@@ -97,24 +97,11 @@ const translations = {
     cases: [
       [
         "AI-Powered\nTrading",
-        `Our Trading Signal Bot delivers precise signals for selected token pairs, and the LLM Research Bot offers detailed market insights and indicators.
-
-Together, they grant you an innovative, AI-driven approach so you can rise ahead of the pack.
-`,
+        `Our Trading Signal Bot delivers trading signals for selected token pairs, and the LLM Research Bot offers detailed market insights and indicators. Together, they grant you an innovative, AI-driven approach so you can rise ahead of the pack.`,
       ],
       [
         "Portfolio Research",
-        `Bella integrates advanced AI to offer a holistic view of your entire crypto portfolio, with optimal rebalancing recommendations. 
-
-By analyzing market conditions and considering your personal financial goals, our tools supercharge your portfolio for maximum growth and stability.
-`,
-      ],
-      [
-        "Market Analysis and\nPrediction",
-        `Bella processes extensive market data, news, and on-chain metrics in real-time to deliver actionable insights and trading signals.
-
-We employ advanced LLM to predict both short-term and long-term market trends to empower your investment decisions.
-`,
+        `Integrates advanced AI to offer a holistic view of your entire crypto portfolio. By analyzing market conditions and considering your personal financial goals, our tools supercharge your portfolio for maximum growth and stability.`,
       ],
       [
         "Risk\nManagement",
@@ -122,7 +109,7 @@ We employ advanced LLM to predict both short-term and long-term market trends to
       ],
       [
         "Cross-Chain\nOptimization",
-        `Bella scans opportunities across multiple blockchain networks to identify the most profitable yield farming and liquidity provision opportunities. Enjoy comprehensive insights and cross-chain arbitrage opportunities across all networks.`,
+        `Scans opportunities across multiple blockchain networks to identify the most profitable yield farming and liquidity provision opportunities. Enjoy comprehensive insights and cross-chain arbitrage opportunities across all networks.`,
       ],
       [
         "Meme\nAmbassador",

@@ -24,6 +24,8 @@ const links = [
       "Venture Fund",
       "https://bellaofficial.medium.com/bella-foundation-launches-20-mil-usd-venture-fund-as-an-effort-to-scale-bella-ecosystem-9b5b3a0da4e3",
     ],
+  ],
+  [
     ["Developers"],
     ["Tuner", "https://github.com/Bella-DeFinTech/uniswap-v3-simulator"],
   ],
@@ -39,63 +41,74 @@ const medias = [
 ];
 
 export const Footer = () => (
-  <footer className="bg-[#191A23] rounded-t-xl 1100:rounded-3xl p-8 1280:p-[60px] my-8 mx-[-20px] 840:mx-[-32px] 1100:mx-0">
-    <div className="1100:pr-[95px] border-b border-white">
-      <div className="flex flex-col 1100:flex-row 1100:items-center">
-        <Image
-          className="h-[30px] w-fit 1100:h-[42px]"
-          src="/assets/bella.png"
-          width={500}
-          height={155}
-          alt="logo"
-        />
-        <div className="font-bold 1100:text-xl mt-6 1100:mt-0 1100:ml-6">
-          AI Agent for Crypto Trading and Yield Farming
+  <footer className="bg-[#191A23]">
+    <div className="px-8 1100:px-14 max-w-[1240px] 1240:px-0 mx-auto">
+      <div className="pt-14 pb-28">
+        <div className="flex lg:flex-row flex-col lg:justify-between">
+          <div>
+            <div>
+              <Image
+                className="h-[30px] w-fit 1100:h-8"
+                src="/assets/bella.png"
+                width={500}
+                height={155}
+                alt="logo"
+              />
+              <div className="1100:text-lg mt-4">
+                AI Agent for Crypto Trading and Yield Farming
+              </div>
+            </div>
+
+            {/* Medias */}
+            <div className="flex items-center gap-x-5 mt-8">
+              {medias.map((media, i) => (
+                <Link target="__blank" key={i} href={media[1]}>
+                  <Image
+                    src={`/assets/medias/${i}.svg`}
+                    width={30}
+                    height={30}
+                    className="w-6 h-6"
+                    alt={media[0]}
+                  />
+                </Link>
+              ))}
+            </div>
+
+            {/* subscribe */}
+            <div className="mt-8">
+              <div>Subscribe to our newsletter</div>
+              <Subscribe />
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:gap-x-20">
+            {links.map((list, i) => (
+              <div
+                className="flex flex-col gap-y-6 mt-4 text-sm 1100:mt-0"
+                key={i}
+              >
+                {list.map((link, j) =>
+                  link[1] !== undefined ? (
+                    <Link target="__blank" key={j} href={link[1]}>
+                      {link[0]}
+                    </Link>
+                  ) : (
+                    <div
+                      key={j}
+                      className="font-bold text-lg 1100:text-xl mt-6 1100:mt-0"
+                    >
+                      {link[0]}
+                    </div>
+                  )
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="mt-[66px] flex-col 1100:flex-row flex justify-between">
-        <Subscribe />
-        {links.map((list, i) => (
-          <div
-            className="flex flex-col gap-y-6 mt-4 text-sm 1100:text-base 1100:mt-0"
-            key={i}
-          >
-            {list.map((link, j) =>
-              link[1] !== undefined ? (
-                <Link target="__blank" key={j} href={link[1]}>
-                  {link[0]}
-                </Link>
-              ) : (
-                <div
-                  key={j}
-                  className="underline font-bold text-lg 1100:text-xl mt-6 1100:mt-0"
-                >
-                  {link[0]}
-                </div>
-              )
-            )}
-          </div>
-        ))}
+      <div className="text-sm opacity-80 pb-4">
+        <div>© 2024 Bella. All Rights Reserved.</div>
       </div>
-      <div className="flex items-center gap-x-5 1100:gap-x-[30px] mt-[66px] mb-[50px]">
-        {medias.map((media, i) => (
-          <Link target="__blank" key={i} href={media[1]}>
-            <Image
-              src={`/assets/medias/${i}.svg`}
-              width={30}
-              height={30}
-              className="1100:w-[30px] 1100:h-[30px] w-[24px] h-[24px]"
-              alt={media[0]}
-            />
-          </Link>
-        ))}
-      </div>
-    </div>
-    <div className="text-sm 1100:text-lg mt-[50px] flex gap-x-10">
-      <div>© 2024 Bella. All Rights Reserved.</div>
-      {/* <div>
-        <Link href="">Privacy Policy</Link>
-      </div> */}
     </div>
   </footer>
 );
