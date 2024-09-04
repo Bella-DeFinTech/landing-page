@@ -33,11 +33,15 @@ const links = [
 
 const medias = [
   // ["Linkedin", ""],
-  ["Medium", "https://medium.com/@Bellaofficial"],
-  ["Telegram", "https://t.me/bellaprotocol"],
-  ["Twitter", "https://twitter.com/BellaProtocol"],
-  ["Discord", "https://discord.gg/jcuFJZWFMh"],
-  ["Github", "https://github.com/Bella-DeFinTech/uniswap-v3-simulator"],
+  ["Twitter", "https://twitter.com/BellaProtocol", "/assets/medias/2.svg"],
+  ["Telegram", "https://t.me/bellaprotocol", "/assets/medias/3.svg"],
+  [
+    "Github",
+    "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
+    "/assets/medias/5.svg",
+  ],
+  ["Discord", "https://discord.gg/jcuFJZWFMh", "/assets/medias/4.svg"],
+  ["Medium", "https://medium.com/@Bellaofficial", "/assets/medias/0.svg"],
 ];
 
 export const Footer = () => (
@@ -64,7 +68,7 @@ export const Footer = () => (
               {medias.map((media, i) => (
                 <Link target="__blank" key={i} href={media[1]}>
                   <Image
-                    src={`/assets/medias/${i}.svg`}
+                    src={media[2]}
                     width={30}
                     height={30}
                     className="w-6 h-6"
