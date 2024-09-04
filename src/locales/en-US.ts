@@ -116,7 +116,7 @@ const translations = {
         `Supercharge your community with our AI-Powered Meme Ambassador, ushering in the fun and engaging world of memes. Transform market trends and data into viral, community-driven content.`,
       ],
       [
-        "Quantitative Strategy",
+        "Quantitative\nStrategy",
         `Empower quant traders to backtest and refine their strategies with unprecedented accuracy. Our AI continuously learns from market data and user strategies to suggest improvements upon quantitative trading approaches.`,
       ],
     ],
