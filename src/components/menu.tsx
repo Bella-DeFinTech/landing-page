@@ -12,7 +12,7 @@ const resources = [
   ["Docs", docs],
 ] as const;
 
-export const Menu = () => {
+export default function Menu() {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const toggle = useCallback(() => setOpen((prev) => !prev), []);
@@ -151,4 +151,4 @@ export const Menu = () => {
         )}
     </>
   );
-};
+}

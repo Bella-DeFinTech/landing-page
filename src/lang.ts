@@ -18,7 +18,15 @@ export const importLang = async (locale: Locale): Promise<Translations> => {
     return langCache.get(locale)!;
   }
 
-  return import(`@/locales/${locale}`).then((ret) => {
+  return (
+    locale === "en-US"
+      ? import("@/locales/en-US")
+      : locale === "kr"
+      ? import("@/locales/kr")
+      : locale === "tr"
+      ? import("@/locales/tr")
+      : import("@/locales/zh-CN")
+  ).then((ret) => {
     langCache.set(locale, ret.default);
     return ret.default;
   });

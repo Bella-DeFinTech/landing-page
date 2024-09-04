@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { LangSwitch } from "./lang-switch";
 import { Translations } from "@/locales/en-US";
-import { Menu } from "./menu";
 import { developers, docs, products } from "@/constant";
+import dynamic from "next/dynamic";
+
+const Menu = dynamic(() => import("./menu"), { ssr: false });
 
 const resources = [
   ["Products", products],
@@ -10,11 +12,7 @@ const resources = [
   ["Documentation", docs],
 ] as const;
 
-export const Navigation = ({
-  translations,
-}: {
-  translations: Translations;
-}) => {
+export const Navigation = () => {
   return (
     <nav className="pt-0 840:pt-10 sticky top-0 840:top-[-20px] bg-[rgba(0,0,0,.6)] z-10 backdrop-blur-sm text-sm 1100:text-base">
       <div className="max-w-8xl mx-auto ">

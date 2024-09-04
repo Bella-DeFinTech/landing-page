@@ -20,7 +20,7 @@ export default async function Home({
   const translations = await importLang(lang);
   return (
     <>
-      <Navigation translations={translations} />
+      <Navigation />
       <main className="max-w-8xl mx-auto mt-10 1100:mt-[70px]">
         <div className="px-5 840:px-8 xl:px-[100px]">
           <Header translations={translations} />
