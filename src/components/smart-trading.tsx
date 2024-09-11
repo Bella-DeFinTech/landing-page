@@ -27,11 +27,11 @@ export const SmartTrading = ({
   translations: Translations;
 }) => {
   return (
-    <div className="840:py-[58px] mt-[80px] 1100:mt-[104px] 1100:py-[85px] p-8 840:px-10 1100:px-[60px] bg-[#141418] rounded-xl 840:rounded-3xl flex flex-col gap-y-8">
+    <div className="840:py-[58px] mt-[80px] 1100:mt-[104px] p-8 840:px-10 1100:px-[60px] bg-[#141418] rounded-xl 840:rounded-3xl flex flex-col gap-y-8">
       <List title="AI Agent" data={translations.ai_agents} />
-      <div className="h-[70px] text-3xl font-medium">+</div>
-      <List title="DeFI Yield" data={translations.defi_yields} />
-      <div className="h-[70px] text-3xl font-medium">=</div>
+      <div className="text-3xl font-medium">+</div>
+      <List title="DeFi Yield" data={translations.defi_yields} />
+      <div className="text-3xl font-medium">=</div>
       <Title>{translations.smart_trading}</Title>
     </div>
   );

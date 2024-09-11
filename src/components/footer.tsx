@@ -53,14 +53,11 @@ export const Footer = () => (
             <div>
               <Image
                 className="h-[30px] w-fit 1100:h-8"
-                src="/assets/bella.png"
-                width={500}
-                height={155}
+                src="/assets/logo_dark.svg"
+                width={1293}
+                height={400}
                 alt="logo"
               />
-              <div className="1100:text-lg mt-4">
-                AI Agent for Crypto Trading and Yield Farming
-              </div>
             </div>
 
             {/* Medias */}

@@ -28,8 +28,11 @@ export default async function Home({
           <Ecos translations={translations} />
           <Gap y={40} />
           <ProductSuit translations={translations} />
+          <Gap y={40} />
           <SmartTrading translations={translations} />
+          <Gap y={40} />
           <UseCase translations={translations} />
+          <Gap y={40} />
           <Investor />
           <Gap y={64} />
           <Exchanges />

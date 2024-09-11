@@ -14,7 +14,7 @@ const Suit: FC<{
 }> = ({ name, data }) => {
   return (
     <div className="flex-1">
-      <div className="font-medium text-2xl 1100:text-[26px] w-[317px] border-b border-white pb-4 mb-8">
+      <div className="font-medium uppercase text-[1.2rem] 1100:text-[26px] w-[317px] border-b border-white pb-2 mb-8">
         {name}
       </div>
       <div className="flex flex-col gap-y-8">
@@ -69,13 +69,13 @@ export const ProductSuit = ({
 }) => {
   return (
     <div>
-      <div className="py-10 flex flex-col 1100:flex-row">
+      <div className="flex flex-col 1100:flex-row">
         <Title>{translations.product_suit.name}</Title>
         <div className="text-xl 840:w-[710px] mt-10 1100:mt-0 1100:ml-10">
           {translations.product_suit.title}
         </div>
       </div>
-      <div className="mt-[80px] max-w-[1100px] 1100:mt-[104px] flex flex-col 1100:flex-row 1100:justify-between gap-y-6 1100:gap-y-0 1100:gap-x-6 1280:gap-x-10">
+      <div className="mt-[80px] 1100:mt-[104px] flex flex-col 1100:flex-row 1100:justify-between gap-y-6 1100:gap-y-0 1100:gap-x-20">
         {translations.product_suit.suits.map((suit, i) => (
           <Suit
             key={i}

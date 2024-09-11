@@ -59,7 +59,12 @@ const Item: FC<{
   const [title, subtitle, hovering] = data.split("|");
   return (
     <>
-      <div className="relative 1100:flex-1">
+      <div
+        className={clsx("relative py-[20px] 1100:flex-1", {
+          "1100:border-x 1100:border-y-0 border-y border-white":
+            !isFirst && !isLast,
+        })}
+      >
         <div className="w-fit 1100:mx-auto">
           <div className="text-2xl 1100:text-4xl font-medium">{title}</div>
           <div
@@ -98,16 +103,13 @@ const Item: FC<{
           </div>
         </div>
       </div>
-      {!isLast && (
-        <div className="h-[1px] w-[200px] my-6 1100:my-0 1100:w-[1px] 1100:h-[140px] 1100:mt-[9px] bg-white 1100:mx-[32px]"></div>
-      )}
     </>
   );
 };
 
 const Info = ({ translations }: { translations: Translations }) => (
-  <div className="bg-[#141418] rounded-xl 840:rounded-3xl p-8 xl:mx-[-34px]">
-    <div className="flex flex-col 1100:flex-row 1100:items-center">
+  <div className="bg-[#141418] rounded-xl 840:rounded-3xl px-8 xl:mx-[-34px]">
+    <div className="flex flex-col 1100:flex-row 1100:items-center py-[80px]">
       {translations.metrics.map((data, i, list) => (
         <Item
           isFirst={i === 0}
@@ -121,30 +123,28 @@ const Info = ({ translations }: { translations: Translations }) => (
 );
 
 export const Brands = ({
+  mini,
   list,
-  minRow = 2,
 }: {
-  minRow?: number;
+  mini?: boolean;
   list: BrandType[];
 }) => (
   <div
     className={clsx(
-      "grid w-fit lg:w-auto gap-y-5 gap-x-5 840:gap-y-0 840:grid-rows-1 grid-flow-col 840:h-8 840:gap-x-9",
-      {
-        "grid-rows-3": minRow === 3,
-        "grid-rows-2": minRow === 2,
-      }
+      "h-fit w-fit lg:w-auto grid grid-rows-2 gap-y-9 840:gap-y-0 840:grid-rows-1 grid-flow-col gap-x-9"
     )}
   >
     {list.map((item, index) => (
       <a
         key={index}
         href={item.url}
-        className="w-fit lg:w-auto"
+        className="w-fit lg:w-auto flex items-center"
         target="__blank"
       >
         <Image
-          className="h-8 object-contain w-fit object-left"
+          className={clsx("sm:h-10 object-contain w-fit object-center", {
+            "h-7": mini,
+          })}
           src={item.src}
           width={item.width}
           height={item.height}

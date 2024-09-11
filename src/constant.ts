@@ -11,6 +11,10 @@ export const products = [
     name: "Tuner",
     link: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
   },
+  {
+    name: "Signal Bot",
+    link: "",
+  },
 ] as const;
 
 export const developers = [
@@ -30,5 +34,9 @@ export const docs = [
   {
     name: "Tuner",
     link: "https://docs.bella.fi/getting-started/readme",
+  },
+  {
+    name: "Ai Bot",
+    link: "",
   },
 ] as const;

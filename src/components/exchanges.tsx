@@ -3,34 +3,23 @@ import { Title } from "./title";
 
 const list = [
   {
-    src: "/assets/exchanges/gate.webp",
+    src: "/assets/exchanges/gate.png",
     url: "https://www.gate.io/",
     width: 360,
     height: 72,
     alt: "gate.io",
     styles: {
-      // backgroundColor: "rgb(255, 255, 255)",
-      // borderRadius: "4px",
-      // border: "5px solid white",
-      // maxHeight: 100,
-      // padding: "26px 7px",
-      // width: 140,
-      // height: 90,
+      padding: "6px 0",
     },
   },
   {
-    src: "/assets/exchanges/bingx.svg",
+    src: "/assets/exchanges/bingx.png",
     url: "https://bingx.com",
-    width: 76,
-    height: 24,
+    width: 264,
+    height: 68,
     alt: "bingx",
     styles: {
-      // backgroundColor: "rgb(255, 255, 255)",
-      // borderRadius: "4px",
-      // border: "5px solid white",
-      // maxHeight: 100,
-      // padding: "4px 0",
-      // height: 50,
+      padding: "4px 0",
     },
   },
   {
@@ -40,12 +29,7 @@ const list = [
     height: 75,
     alt: "binance",
     styles: {
-      // backgroundColor: "#fff",
-      // borderRadius: "4px",
-      // border: "5px solid white",
-      // maxHeight: 100,
-      // padding: "24px 0px",
-      // width: 170,
+      padding: "2px 0",
     },
   },
   {
@@ -55,29 +39,17 @@ const list = [
     height: 32,
     alt: "bitget",
     styles: {
-      // backgroundColor: "#fff",
-      // borderRadius: "4px",
-      // border: "5px solid white",
-      // maxHeight: 100,
-      // padding: "30px 9px",
-      // width: 180,
-      // height: 90,
+      padding: "2px 0",
     },
   },
   {
     src: "/assets/exchanges/mexc.svg",
     url: "https://www.mexc.com/",
-    width: 581,
-    height: 89,
+    width: 87,
+    height: 34,
     alt: "mexc",
     styles: {
-      // backgroundColor: "#fff",
-      // borderRadius: "4px",
-      // border: "5px solid white",
-      // maxHeight: 100,
-      // padding: "24px 0px",
-      // width: 170,
-      height: 24,
+      padding: "4px 0",
     },
   },
 ];
@@ -88,7 +60,7 @@ export const Exchanges = () => (
       <Title>Exchanges</Title>
     </div>
     <div className="my-10">
-      <Brands minRow={3} list={list} />
+      <Brands mini list={list} />
     </div>
   </div>
 );

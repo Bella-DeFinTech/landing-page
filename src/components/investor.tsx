@@ -31,11 +31,14 @@ const list = [
     alt: "RockX",
   },
   {
-    src: "/assets/investors/4.png",
+    src: "/assets/investors/4.svg",
     url: "https://ledgercap.co/",
-    width: 196,
-    height: 80,
+    width: 152,
+    height: 32,
     alt: "Ledger Capital",
+    styles: {
+      padding: "6px 0",
+    },
   },
 ];
 
@@ -46,7 +49,7 @@ export const Investor = () => {
         <Title>Investors</Title>
       </div>
       <div className="my-10">
-        <Brands list={list} minRow={3} />
+        <Brands mini list={list} />
       </div>
     </div>
   );

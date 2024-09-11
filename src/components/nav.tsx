@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { LangSwitch } from "./lang-switch";
-import { Translations } from "@/locales/en-US";
 import { developers, docs, products } from "@/constant";
 import dynamic from "next/dynamic";
 
@@ -19,9 +18,9 @@ export const Navigation = () => {
         <div className="px-5 840:px-8 xl:px-[100px] flex items-center h-[68px]">
           <Image
             className="h-[30px] w-fit 1100:h-[42px]"
-            src="/assets/bella.png"
-            width={500}
-            height={155}
+            src="/assets/logo_dark.svg"
+            width={1292}
+            height={400}
             alt="logo"
           />
           <Menu />
