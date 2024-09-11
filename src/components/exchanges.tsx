@@ -14,10 +14,10 @@ const list = [
   },
   {
     src: "/assets/exchanges/bingx.png",
-    url: "https://bingx.com",
+    url: "https://www.bithumb.com/react/",
     width: 264,
     height: 68,
-    alt: "bingx",
+    alt: "bithumb",
     styles: {
       padding: "4px 0",
     },
@@ -44,10 +44,10 @@ const list = [
   },
   {
     src: "/assets/exchanges/mexc.svg",
-    url: "https://www.mexc.com/",
+    url: "https://www.bybit.com/en/",
     width: 87,
     height: 34,
-    alt: "mexc",
+    alt: "bybit",
     styles: {
       padding: "4px 0",
     },

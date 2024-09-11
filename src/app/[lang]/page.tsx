@@ -26,7 +26,7 @@ export default async function Home({
           <Header translations={translations} />
           <Gap y={70} />
           <Ecos translations={translations} />
-          <Gap y={40} />
+          <Gap y={80} />
           <ProductSuit translations={translations} />
           <Gap y={40} />
           <SmartTrading translations={translations} />

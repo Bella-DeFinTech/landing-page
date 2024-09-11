@@ -5,7 +5,7 @@ import { Subscribe } from "./subscribe";
 const links = [
   [
     ["Resources"],
-    ["Ai Bot Docs", ""],
+    ["AI Bot Docs", ""],
     ["Flex Savings Docs", "https://bellafi.gitbook.io/bella-protocol/"],
     [
       "LP Farm Docs",

@@ -36,7 +36,7 @@ export const docs = [
     link: "https://docs.bella.fi/getting-started/readme",
   },
   {
-    name: "Ai Bot",
+    name: "AI Bot",
     link: "",
   },
 ] as const;

@@ -32,10 +32,10 @@ const list = [
   },
   {
     src: "/assets/investors/4.svg",
-    url: "https://ledgercap.co/",
+    url: "https://www.dwf-labs.com/",
     width: 152,
     height: 32,
-    alt: "Ledger Capital",
+    alt: "dwf labs",
     styles: {
       padding: "6px 0",
     },
