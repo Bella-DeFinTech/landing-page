@@ -83,7 +83,7 @@ export const ProductSuit = ({
             data={suit.data.map((s, j) => ({
               ...s,
               url: [
-                ["https://t.me/BellaSignalTestnetBot", ""],
+                ["https://t.me/BellaSignalBot", ""],
                 ["https://fs.bella.fi/", "http://lpfarm.bella.fi/"],
                 ["https://docs.bella.fi/getting-started/readme", ""],
               ][i][j],
