@@ -32,7 +32,7 @@ const translations = {
           {
             name: "Flex Savings",
             description:
-              "A gas-efficient, smart liquidity pool that auto-compounds your returns.",
+              "A gas-efficient, smart liquidity pool that auto-compounds your returns",
           },
           {
             name: "LP Farm",
@@ -105,7 +105,7 @@ const translations = {
       ],
       [
         "Risk\nManagement",
-        `Our models detect potential market risks and can suggest optimal hedging strategies to protect your assets. Bella’s AI Agent conducts market and portfolio analysis to recommend asset diversification strategies`,
+        `Our models detect potential market risks and can suggest optimal hedging strategies to protect your assets. Bella’s AI Agent conducts market and portfolio analysis to recommend asset diversification strategies.`,
       ],
       [
         "Cross-Chain\nOptimization",

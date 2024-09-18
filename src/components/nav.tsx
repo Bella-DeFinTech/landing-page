@@ -8,7 +8,7 @@ const Menu = dynamic(() => import("./menu"), { ssr: false });
 const resources = [
   ["Products", products],
   ["Developers", developers],
-  ["Documentation", docs],
+  ["Documentations", docs],
 ] as const;
 
 export const Navigation = () => {

@@ -13,7 +13,7 @@ export const products = [
   },
   {
     name: "Signal Bot",
-    link: "",
+    link: "https://t.me/BellaSignalBot",
   },
 ] as const;
 
@@ -37,6 +37,6 @@ export const docs = [
   },
   {
     name: "AI Bot",
-    link: "",
+    link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-signal-bot",
   },
 ] as const;
