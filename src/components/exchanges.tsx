@@ -3,26 +3,6 @@ import { Title } from "./title";
 
 const list = [
   {
-    src: "/assets/exchanges/gate.png",
-    url: "https://www.gate.io/",
-    width: 360,
-    height: 72,
-    alt: "gate.io",
-    styles: {
-      padding: "6px 0",
-    },
-  },
-  {
-    src: "/assets/exchanges/bingx.png",
-    url: "https://www.bithumb.com/react/",
-    width: 264,
-    height: 68,
-    alt: "bithumb",
-    styles: {
-      padding: "4px 0",
-    },
-  },
-  {
     src: "/assets/exchanges/binance.png",
     url: "https://www.binance.com/",
     width: 360,
@@ -50,6 +30,26 @@ const list = [
     alt: "bybit",
     styles: {
       padding: "4px 0",
+    },
+  },
+  {
+    src: "/assets/exchanges/bingx.png",
+    url: "https://www.bithumb.com/react/",
+    width: 264,
+    height: 68,
+    alt: "bithumb",
+    styles: {
+      padding: "4px 0",
+    },
+  },
+  {
+    src: "/assets/exchanges/gate.png",
+    url: "https://www.gate.io/",
+    width: 360,
+    height: 72,
+    alt: "gate.io",
+    styles: {
+      padding: "6px 0",
     },
   },
 ];
