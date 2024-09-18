@@ -13,7 +13,7 @@ export const Header = ({ translations }: { translations: Translations }) => {
             {translations.subTitle}
           </p>
           <a
-            href="http://lpfarm.bella.fi/"
+            href="https://t.me/BellaSignalBot"
             className="bg-white text-black py-3 px-12 inline-flex rounded-full items-center w-fit h-10 1100:h-auto"
             target="__blank"
           >

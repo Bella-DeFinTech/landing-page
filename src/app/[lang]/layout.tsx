@@ -4,7 +4,7 @@ import "../globals.css";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Bella",
+  title: "Bella Protocol",
   description: "Unleash the Power of AI in Crypto Trading",
 };
 
