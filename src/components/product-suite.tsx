@@ -83,11 +83,17 @@ export const ProductSuit = ({
             data={suit.data.map((s, j) => ({
               ...s,
               url: [
-                ["https://t.me/BellaSignalBot", ""],
+                [
+                  "https://t.me/BellaSignalBot",
+                  "https://t.me/BellaResearchBot",
+                ],
                 ["https://fs.bella.fi/", "http://lpfarm.bella.fi/"],
-                ["https://docs.bella.fi/getting-started/readme", ""],
+                [
+                  "https://docs.bella.fi/getting-started/readme",
+                  "https://app.eigenlayer.xyz/operator/0xfC31079f7E5B85e1bAC742F9c946CcB2C14B01f8",
+                ],
               ][i][j],
-              disabled: (i === 0 && j === 1) || (i === 2 && j === 1),
+              // disabled: (i === 0 && j === 1) || (i === 2 && j === 1),
             }))}
           />
         ))}

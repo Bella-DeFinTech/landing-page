@@ -32,7 +32,7 @@ export const Navigation = () => {
                 </div>
                 <ul
                   style={{ transformOrigin: "50% 0" }}
-                  className="invisible delay-75 opacity-0 scale-y-[0.3] pointer-events-none w-[170px] absolute top-full left-1/2 -translate-x-1/2 group-hover:scale-y-100 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto bg-[rgba(39,39,39,1)] duration-300 transition-all p-2.5 drop-shadow-lg rounded-md"
+                  className="invisible delay-75 opacity-0 scale-y-[0.3] pointer-events-none w-[184px] absolute top-full left-1/2 -translate-x-1/2 group-hover:scale-y-100 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto bg-[rgba(39,39,39,1)] duration-300 transition-all p-2.5 drop-shadow-lg rounded-md"
                 >
                   {links.map((link, j) => (
                     <li key={j}>

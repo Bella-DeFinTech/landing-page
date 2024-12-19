@@ -1,8 +1,8 @@
 export const products = [
-  {
-    name: "Flex Savings",
-    link: "https://fs.bella.fi/",
-  },
+  // {
+  //   name: "Flex Savings",
+  //   link: "https://fs.bella.fi/",
+  // },
   {
     name: "LP Farm",
     link: "http://lpfarm.bella.fi/",
@@ -15,6 +15,10 @@ export const products = [
     name: "Signal Bot",
     link: "https://t.me/BellaSignalBot",
   },
+  {
+    name: "LLM Research Bot",
+    link: "https://t.me/BellaResearchBot",
+  },
 ] as const;
 
 export const developers = [
@@ -26,7 +30,7 @@ export const developers = [
 ] as const;
 
 export const docs = [
-  { name: "Flex Savings", link: "https://bellafi.gitbook.io/bella-protocol/" },
+  // { name: "Flex Savings", link: "https://bellafi.gitbook.io/bella-protocol/" },
   {
     name: "LP Farm",
     link: "https://bellafi.gitbook.io/bella-protocol/lp-farm/about-bella-lp-farm",
@@ -36,7 +40,11 @@ export const docs = [
     link: "https://docs.bella.fi/getting-started/readme",
   },
   {
-    name: "AI Bot",
+    name: "Signal Bot",
     link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-signal-bot",
+  },
+  {
+    name: "LLM Research Bot",
+    link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-research-bot",
   },
 ] as const;
