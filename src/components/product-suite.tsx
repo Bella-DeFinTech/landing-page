@@ -86,8 +86,9 @@ export const ProductSuit = ({
                 [
                   "https://t.me/BellaSignalBot",
                   "https://t.me/BellaResearchBot",
+                  "https://coinflip.bella.fi",
                 ],
-                ["https://fs.bella.fi/", "http://lpfarm.bella.fi/"],
+                ["http://lpfarm.bella.fi/"],
                 [
                   "https://docs.bella.fi/getting-started/readme",
                   "https://app.eigenlayer.xyz/operator/0xfC31079f7E5B85e1bAC742F9c946CcB2C14B01f8",

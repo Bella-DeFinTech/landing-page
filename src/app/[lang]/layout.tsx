@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Bella Protocol",
-  description: "Unleash the Power of AI in Crypto Trading",
+  description: "Unleash the Power of AI for Trading and Fun",
 };
 
 export default async function RootLayout({

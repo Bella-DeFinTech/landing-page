@@ -9,3 +9,4 @@ export { UseCase } from "./usecase";
 export { Investor } from "./investor";
 export { Exchanges } from "./exchanges";
 export { Footer } from "./footer";
+export { Modal } from "./modal";

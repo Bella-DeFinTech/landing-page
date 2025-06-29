@@ -1,15 +1,24 @@
 const TR = {
-  title: "Kripto Ticaretinde Yapay Zekanın Gücünü Ortaya Çıkarın",
-  subTitle: "Ticaret ve Yield Farming Getirilerinizi En Üst Düzeye Çıkarın",
+  title: "Alım-satım ve eğlence için yapay zekânın gücünü ortaya çıkarın",
+  subTitle: "Daha akıllı işlemler ve etkileşimli on-chain deneyimleri optimize edin",
+  buttons: {
+    getSignals: "Sinyal Al",
+    playNow: "Şimdi Oyna",
+  },
+  modal: {
+    title: "Bella’da Yeni: Token Yugijo (トークン遊園地) Yayında! 🐰",
+    description: "Yazı-tura çevirin, yapay zekâ içgörüleri alın ve adil rastgelelikle kazanın — şimdi Optimism üzerinde.",
+    playButton: "Şimdi Oyna"
+  },
   metrics: [
-    "100.000’den|fazla toplam kullanıcı sayısı",
+    "200.000’den|fazla toplam kullanıcı sayısı",
     "200%|getiri (Üzerine gelince görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
     "3.2|Sharpe Oranı (Üzerine gelindiğinde görünür)|Bu rakam, belirli bir portföyü yansıtarak 2024 yılının ilk yarısındaki verilerimize dayanmaktadır. Yüksek volatiliteye sahiptir ve yalnızca referans amaçlı kullanılmalı, finansal tavsiye olarak değerlendirilmemelidir. Gerçek sonuçlar, model seçimi, token seçimi ve portföy bileşimine bağlı olarak değişiklik gösterebilir.",
   ],
   product_suit: {
     name: "Ürün Paketi",
     title:
-      "Bella, önde gelen yapay zeka algoritmaları kullanarak DeFi getirinizi artırır ve kripto yatırımlarınız için sadeleştirilmiş ve optimize edilmiş çözümler sunar.",
+      "Bella, nicel alım-satım sinyalleri, DeFi likidite sağlama stratejileri ve işlem ücretsiz on-chain oyun deneyimleri sunan bir yapay zekâ ürün paketi sağlar.",
     suits: [
       {
         name: "AI Güçlendirilmiş",
@@ -24,16 +33,21 @@ const TR = {
             description:
               "Telegram tabanlı kripto LLM (Large Language Model) botumuzla gerçek zamanlı, derinlemesine piyasa içgörülerinin ve ölçümlerinin kilidini açın",
           },
+          {
+            name: "Token Yugijo",
+            description:
+              "Bella’nın yapay zekâ tavşanı tarafından sunulan yıldırım hızında, işlem ücretsiz bir yazı-tura oyunu. Eğlenmek için çevirin, oynarken öğrenin.",
+          },
         ],
       },
       {
         name: "Varlık Yönetimi",
         data: [
-          {
-            name: "Flex Savings",
-            description:
-              "Getirilerinizi otomatik olarak bileşik hale getiren, İşlem ücret verimliliğine sahip, akıllı bir likidite havuzu.",
-          },
+          // {
+          //   name: "Flex Savings",
+          //   description:
+          //     "Getirilerinizi otomatik olarak bileşik hale getiren, İşlem ücret verimliliğine sahip, akıllı bir likidite havuzu.",
+          // },
           {
             name: "LP Farm",
             description:
@@ -114,8 +128,8 @@ const TR = {
         `Bella, birden fazla blockchain ağı boyunca fırsatları tarar ve en karlı getiri çiftçiliği ve likidite sağlama fırsatlarını belirler. Tüm ağlarda kapsamlı içgörüler ve çapraz zincir tahvil fırsatlarından faydalanın.`,
       ],
       [
-        "“Meme” Elçisi",
-        `Memelerin eğlenceli ve ilgi çekici dünyasını başlatan Yapay Zeka Destekli Meme Elçimiz ile topluluğunuzu güçlendirin. Pazar trendlerini ve verilerini viral, topluluk odaklı içeriğe dönüştürün.`,
+        "Oyun Tabanlı Başlangıç",
+        `Token Yugijo (トークン遊園地), basit bir yazı-turayı yapay zekâ destekli, doğrulanabilir şekilde adil bir deneyime dönüştürür. Her oturumda 200.000+ kullanıcının güvendiği Bella Signal Bot’tan gelen içgörüler ve token önerileri bulunur. Sıfır sürtünme ile kriptoyu keşfedin — işlem ücreti yok, ön bilgi gerekmez.`,
       ],
       [
         "Nicel Strateji",
