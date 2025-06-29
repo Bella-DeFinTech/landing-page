@@ -8,6 +8,7 @@ import {
   UseCase,
   Footer,
   Exchanges,
+  Modal,
 } from "@/components";
 import { Investor } from "@/components/investor";
 import { importLang, Locale } from "@/lang";
@@ -40,6 +41,7 @@ export default async function Home({
         </div>
       </main>
       <Footer />
+      <Modal translations={translations} />
     </>
   );
 }

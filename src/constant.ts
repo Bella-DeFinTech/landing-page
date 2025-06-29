@@ -19,6 +19,10 @@ export const products = [
     name: "LLM Research Bot",
     link: "https://t.me/BellaResearchBot",
   },
+  {
+    name: "Token Yugijo (トークン遊園地)",
+    link: "https://coinflip.bella.fi",
+  }
 ] as const;
 
 export const developers = [
@@ -47,4 +51,8 @@ export const docs = [
     name: "LLM Research Bot",
     link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-research-bot",
   },
+  {
+    name: "Token Yugijo (トークン遊園地)",
+    link: "https://github.com/Bella-DeFinTech/TossGame",
+  }
 ] as const;

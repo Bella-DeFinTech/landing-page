@@ -1,15 +1,24 @@
 const translations = {
-  title: "Unleash the Power of AI in Crypto Trading",
-  subTitle: "Maximize Your Trading and Yield Farming Returns",
+  title: "Unleash the Power of AI for Trading and Fun",
+  subTitle: "Optimize Smarter Trades and Interactive\nOnchain Experiences",
+  buttons: {
+    getSignals: "Get Signals",
+    playNow: "Play Now",
+  },
+  modal: {
+    title: "New at Bella: Token Yugijo (トークン遊園地) is Live! 🐰",
+    description: "Flip coins, get AI insights, and win with fair randomness — now on Optimism.",
+    playButton: "Play Now"
+  },
   metrics: [
-    "100,000 +|Total Number of Users",
+    "200,000 +|Total Number of Users",
     "200%|Returns|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition.",
     "3.2|Sharpe Ratio|This figure reflects a certain portfolio based on our 2024 H1 data. It is highly volatile and should only be used as a reference, not as financial advice. Actual results may vary based on model selection, token selection, and portfolio composition.",
   ],
   product_suit: {
     name: "PRODUCT SUITE",
     title:
-      "Bella enhances your DeFi returns using leading AI algorithms and provides streamlined and optimized solutions for your crypto investment",
+      "Bella provides a suite of AI products for quantitative trading signals, DeFi liquidity provision strategies, and gas-free on-chain gaming experiences.",
     suits: [
       {
         name: "AI Empowered",
@@ -24,16 +33,21 @@ const translations = {
             description:
               "Unlock real-time, in-depth market insights and metrics with our Telegram-based crypto LLM bot",
           },
+          {
+            name: "Token Yugijo",
+            description:
+              "A lightning-fast, gasless coin-flip game hosted by Bella's AI bunny. Flip for fun, learn through play.",
+          },
         ],
       },
       {
         name: "Asset Management",
         data: [
-          {
-            name: "Flex Savings",
-            description:
-              "A gas-efficient, smart liquidity pool that auto-compounds your returns",
-          },
+          // {
+          //   name: "Flex Savings",
+          //   description:
+          //     "A gas-efficient, smart liquidity pool that auto-compounds your returns",
+          // },
           {
             name: "LP Farm",
             description:
@@ -112,8 +126,8 @@ const translations = {
         `Scans opportunities across multiple blockchain networks to identify the most profitable yield farming and liquidity provision opportunities. Enjoy comprehensive insights and cross-chain arbitrage opportunities across all networks.`,
       ],
       [
-        "Meme\nAmbassador",
-        `Supercharge your community with our AI-Powered Meme Ambassador, ushering in the fun and engaging world of memes. Transform market trends and data into viral, community-driven content.`,
+        "Game-Driven\nOnboarding",
+        `Token Yugijo (トークン遊園地) turns a simple coin flip into an AI-powered, verifiably fair experience. Every session features insights and token picks delivered by Bella Signal Bot, trusted by 200,000+ users. Explore crypto with zero friction — no gas, no prior knowledge needed.`,
       ],
       [
         "Quantitative\nStrategy",
