@@ -36,7 +36,7 @@ const cards = [
   },
   {
     img: {
-      src: "/assets/cases/2.svg",
+      src: "/assets/cases/2.png",
       width: 434,
       height: 454,
     },
