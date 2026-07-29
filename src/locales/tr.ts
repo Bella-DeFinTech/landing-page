@@ -24,14 +24,9 @@ const TR = {
         name: "AI Güçlendirilmiş",
         data: [
           {
-            name: "Bella Signal Bot",
+            name: "Bella Alpha",
             description:
-              "Doğrudan Telegram üzerinden iletilen yapay zeka odaklı kısa ve uzun sinyallerle ticaretinizi geliştirin",
-          },
-          {
-            name: "Bella Research Bot",
-            description:
-              "Telegram tabanlı kripto LLM (Large Language Model) botumuzla gerçek zamanlı, derinlemesine piyasa içgörülerinin ve ölçümlerinin kilidini açın",
+              "Bella Alpha botu ile yapay zeka destekli sinyaller sayesinde alım satım işlemlerinizi bir üst seviyeye taşıyın ve gerçek zamanlı piyasa analizlerine tek bir Telegram botu üzerinden anında erişin.",
           },
           {
             name: "Token Yugijo",
@@ -113,7 +108,7 @@ const TR = {
     cases: [
       [
         "Yapay Zeka Destekli Ticaret",
-        `Alım-Satım Sinyali Botumuz seçilen token çiftleri için ticaret sinyalleri sunar, ve LLM (Large Language Model) Araştırma Botumuz detaylı piyasa içgörüleri ve göstergeler sağlar. Birlikte, yenilikçi bir yapay zeka destekli yaklaşım sunarak öne çıkmanıza yardımcı olurlar.`,
+        `Bella Alpha botumuz, seçili işlem çiftleri için yapay zeka tabanlı alım satım sinyalleri üretmenin yanı sıra gelişmiş araştırma motoru aracılığıyla detaylı piyasa analizleri ve teknik göstergeler sunar. Bu iki güçlü özelliği tek bir platformda birleştiren yenilikçi yaklaşımımız, piyasada her zaman bir adım önde olmanızı sağlar.`,
       ],
       [
         "Portföy Araştırması",

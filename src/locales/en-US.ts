@@ -24,14 +24,9 @@ const translations = {
         name: "AI Empowered",
         data: [
           {
-            name: "Bella Signal Bot",
+            name: "Bella Alpha",
             description:
-              "Elevate your trading with AI-driven short and long signals, delivered directly through Telegram",
-          },
-          {
-            name: "Bella Research Bot",
-            description:
-              "Unlock real-time, in-depth market insights and metrics with our Telegram-based crypto LLM bot",
+              "Elevate your trading with AI-driven signals, and unlock real-time market insights, all delivered through one Telegram bot.",
           },
           {
             name: "Token Yugijo",
@@ -111,7 +106,7 @@ const translations = {
     cases: [
       [
         "AI-Powered\nTrading",
-        `Our Trading Signal Bot delivers trading signals for selected token pairs, and the LLM Research Bot offers detailed market insights and indicators. Together, they grant you an innovative, AI-driven approach so you can rise ahead of the pack.`,
+        `Our Bella Alpha bot delivers AI-driven trading signals for selected token pairs, alongside detailed market insights and indicators through its research engine. Together, they grant you an innovative, all-in-one approach so you can rise ahead of the pack.`,
       ],
       [
         "Portfolio Research",

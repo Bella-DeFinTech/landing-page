@@ -7,7 +7,7 @@ const links = [
     ["Resources"],
     [
       "AI Bot Docs",
-      "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-signal-bot",
+      "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-alpha",
     ],
     ["Token Yugijo Docs", "https://github.com/Bella-DeFinTech/TossGame"],
     [

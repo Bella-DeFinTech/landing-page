@@ -12,12 +12,8 @@ export const products = [
     link: "https://github.com/Bella-DeFinTech/uniswap-v3-simulator",
   },
   {
-    name: "Signal Bot",
+    name: "Bella Alpha",
     link: "https://t.me/BellaSignalBot",
-  },
-  {
-    name: "LLM Research Bot",
-    link: "https://t.me/BellaResearchBot",
   },
   {
     name: "Token Yugijo (トークン遊園地)",
@@ -44,12 +40,8 @@ export const docs = [
     link: "https://docs.bella.fi/getting-started/readme",
   },
   {
-    name: "Signal Bot",
-    link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-signal-bot",
-  },
-  {
-    name: "LLM Research Bot",
-    link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-research-bot",
+    name: "Bella Alpha",
+    link: "https://bellafi.gitbook.io/bella-protocol/ai-bot/bella-alpha",
   },
   {
     name: "Token Yugijo (トークン遊園地)",
