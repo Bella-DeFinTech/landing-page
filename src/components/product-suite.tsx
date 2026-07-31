@@ -85,7 +85,6 @@ export const ProductSuit = ({
               url: [
                 [
                   "https://t.me/BellaSignalBot",
-                  "https://t.me/BellaResearchBot",
                   "https://coinflip.bella.fi",
                 ],
                 ["http://lpfarm.bella.fi/"],

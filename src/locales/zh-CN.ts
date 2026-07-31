@@ -24,14 +24,9 @@ const zhCN = {
         name: "AI驱动",
         data: [
           {
-            name: "Bella Signal Bot",
+            name: "Bella Alpha",
             description:
-              "通过Telegram提升您的交易与人工智能驱动的空头和多头信号",
-          },
-          {
-            name: "Bella Research Bot",
-            description:
-              "使用我们的Telegram LLM机器人来实时解锁深入的市场指标和见解",
+              "通过 AI 驱动的交易信号提升交易体验，在一个 Telegram Bot 中即可获取实时市场洞察。",
           },
           {
             name: "Token Yugijo",
@@ -105,7 +100,7 @@ const zhCN = {
     cases: [
       [
         "AI驱动的交易",
-        `我们的交易信号机器人为选定的代币对提供精确的信号，且我们的大模型调研机器人提供详细的市场洞察和指标。我们的工具将会赋予您一个创新的，人工智能驱动的方法。`,
+        `Bella Alpha 为精选交易对提供智能 AI 交易信号，并结合研究引擎输出详细的市场分析与关键指标，为您带来一体化的交易体验，帮助您抢先把握市场机会。`,
       ],
       [
         "投资组合调研",
